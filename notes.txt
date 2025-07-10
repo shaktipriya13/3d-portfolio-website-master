@@ -1,0 +1,1 @@
+styled-components: It’s a library for React that allows you to create styled React components with actual CSS syntax, but directly within your .js or .jsx files.
