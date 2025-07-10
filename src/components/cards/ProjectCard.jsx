@@ -133,6 +133,18 @@ const StyledButton = styled.a`
     }
   }
 `;
+const ButtonsContainer = styled.div`
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+`;
 const ProjectCard = ({ project }) => {
   return (
     <Card>
