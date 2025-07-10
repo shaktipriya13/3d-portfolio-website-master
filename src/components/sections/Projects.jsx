@@ -101,7 +101,7 @@ const Projects = () => {
             marginBottom: "40px",
           }}
         >
-          I have worked on a wide range of projects. From web apps to android
+          I have worked on a wide range of projects. From fullstacks to android
           apps. Here are some of my projects.
         </Desc>
 
@@ -114,22 +114,22 @@ const Projects = () => {
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "web app"}
-            onClick={() => setToggle("web app")}
+            active={toggle === "fullstack"}
+            onClick={() => setToggle("fullstack")}
           >
             FULLSTACK
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "android app"}
-            onClick={() => setToggle("android app")}
+            active={toggle === "backend"}
+            onClick={() => setToggle("backend")}
           >
             BACKEND
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "machine learning"}
-            onClick={() => setToggle("machine learning")}
+            active={toggle === "frontend"}
+            onClick={() => setToggle("frontend")}
           >
             FRONTEND
           </ToggleButton>

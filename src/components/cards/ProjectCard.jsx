@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 const Card = styled.div`
   width: 330px;
@@ -95,6 +97,42 @@ const Button = styled.a`
   text-align: center;
 `;
 
+const StyledButton = styled.a`
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+
+  box-shadow: 0 0 12px ${({ theme }) => theme.primary};
+  transition: all 0.3s ease-in-out;
+
+  span {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    span {
+      transform: rotate(360deg);
+      color: black;
+    }
+  }
+`;
 const ProjectCard = ({ project }) => {
   return (
     <Card>
@@ -110,9 +148,23 @@ const ProjectCard = ({ project }) => {
           <Avatar src={member.img} />
         ))}
       </Members>
-      <Button href={project.github} target="_blank">
-        View Code
-      </Button>
+      
+      <ButtonsContainer>
+        
+        <StyledButton href={project.github} target="_blank" aria-label="GitHub Repo">
+            <span>
+              <FaGithub size={20} />
+            </span>
+        </StyledButton>
+
+        <StyledButton href={project.webapp} target="_blank" aria-label="Live Site">
+          <span>
+            <FiExternalLink size={20} />
+          </span>
+        </StyledButton>
+
+      </ButtonsContainer>
+
     </Card>
   );
 };

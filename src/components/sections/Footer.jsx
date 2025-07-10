@@ -92,7 +92,7 @@ const Footer = () => {
           <NavLink href="#Projects">Projects</NavLink>
           <NavLink href="#Education">Education</NavLink>
         </Nav>
-        <SocialMediaIcons>
+        {/* <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display">
             <FacebookRounded />
           </SocialMediaIcon>
@@ -105,8 +105,8 @@ const Footer = () => {
           <SocialMediaIcon href={Bio.insta} target="display">
             <Instagram />
           </SocialMediaIcon>
-        </SocialMediaIcons>
-        <Copyright>&copy; 2025 Shakti Priya. All rights reserved.</Copyright>
+        </SocialMediaIcons> */}
+        <Copyright>Made with Joy💫 | Shakti Priya</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
