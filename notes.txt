@@ -1,1 +1,13 @@
 styled-components: It’s a library for React that allows you to create styled React components with actual CSS syntax, but directly within your .js or .jsx files.
+we have put in id="about" so on clicking about we are scrolled up to About section  . this is how the scroll fxn works.
+<div id="about">...</div>
+it can now be scrolled into view using links like:
+
+<a href="#about">Go to Hero Section</a>
+Or in React, with buttons or NavLinks.
+
+So, scrolling function means:
+
+When you click on something (like a navbar link), the page automatically scrolls down to the section with id="about".
+
+
