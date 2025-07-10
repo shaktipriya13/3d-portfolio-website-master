@@ -106,7 +106,7 @@ const Footer = () => {
             <Instagram />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2025 Shakti Priya. All rights reserved.</Copyright>
+        <Copyright>Made with Joy💫 | Shakti Priya</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
