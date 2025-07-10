@@ -119,6 +119,7 @@ const SubTitle = styled.div`
   line-height: 32px;
   margin-bottom: 42px;
   color: ${({ theme }) => theme.text_primary + 95};
+  // +95 is for opacity
 
   @media (max-width: 960px) {
     text-align: center;
@@ -221,7 +222,7 @@ const Hero = () => {
       <HeroContainer>
         <HeroBg>
           <StarCanvas />
-          <HeroBgAnimation />
+          {/* <HeroBgAnimation /> */}
         </HeroBg>
 
         <motion.div {...headContainerAnimation}>
