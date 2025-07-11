@@ -60,6 +60,11 @@ export const skills = [
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
       },
+      {
+        name: "Tailwind",
+        image:
+        "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+      },
       // {
       //   name: "Material UI",
       //   image:
@@ -238,7 +243,7 @@ export const skills = [
       {
         name: "Git",
         image:
-          "https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png",
+          "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
       },
       {
         name: "GitHub",
@@ -251,6 +256,11 @@ export const skills = [
           "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
       },
       {
+        name: "Render",
+        image:
+          "https://render.com/brand/render_1105076560.svg",
+        },
+      {
         name: "VS Code",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
@@ -258,8 +268,9 @@ export const skills = [
       {
         name: "Postman",
         image:
-          "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
+          "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
       },
+      
       // {
       //   name: "Adobe XD",
       //   image:
