@@ -527,7 +527,7 @@ export const projects = [
     description:
       "TubNest is the backend of a video-sharing platform, built using Node.js, Express.js, and MongoDB. The project implements complete RESTful APIs for user authentication, video upload, comment management, and like/dislike functionality. It uses JWT for secure authentication, Multer for video uploads, and Cloudinary for media storage. The backend is modular, scalable, and follows best practices with proper error handling, validation (using express-validator), and secure middleware. Deployed on Render and tested with Postman, the API enables robust interaction between frontend and database.",
     image:
-      "https://user-images.githubusercontent.com/64485885/234567890-tubnest-backend.png", // Replace with actual screenshot or API diagram if available
+    "https://ik.imagekit.io/shakti13priya/Screenshot%202025-07-11%20174523.png?updatedAt=1752236190594",
     tags: [
       "Node.js",
       "Express.js",
@@ -542,7 +542,8 @@ export const projects = [
     ],
     category: "backend",
     github: "https://github.com/shaktipriya13/TubeNest-A-Video-Streaming-Social-Platform-Backend", // Replace if your repo URL is different
-    webapp: "https://tubenest-backend-a-video-streaming-social.onrender.com/", // Replace with actual deployed backend base URL if available
+    webapp:
+    "https://raw.githubusercontent.com/shaktipriya13/TubeNest-A-Video-Streaming-Social-Platform-Backend/main/docs/TubeNest-Backend-API-Collection.json",  
   },
   {
     "id": "88",
