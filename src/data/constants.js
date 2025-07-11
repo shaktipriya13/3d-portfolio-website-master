@@ -664,11 +664,12 @@ export const projects = [
     "title": "Travelia - Landing Page",
     "date": "Jul 2025",
     "description": "Travelia is a fully responsive travel-themed landing page built with HTML, CSS, and JavaScript. Designed with a mobile-first approach, it offers an engaging, clean UI and intuitive navigation. Ideal for travel agencies or developers learning responsive web design.",
-    "image": "https://user-images.githubusercontent.com/00000000/travelia-project-screenshot.png",
+    "image": 
+    "https://ik.imagekit.io/shakti13priya/tourist.png?updatedAt=1752235199019",
     "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"],
     "category": "web app",
     "github": "https://github.com/your-username/travelia",
-    "webapp": "https://your-live-demo-link.netlify.app"
+    "webapp": "https://travelia-tours-shaktip.netlify.app/"
   }
 
 
