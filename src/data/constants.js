@@ -262,13 +262,8 @@ export const skills = [
       {
         name: "Render",
         image:
-<<<<<<< HEAD
           "https://render.com/brand/render_1105076560.svg",
         },
-=======
-          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
-      },
->>>>>>> db786f8e4fd95e0e393e437a59c4574e4f74a517
       {
         name: "VS Code",
         image:
@@ -402,7 +397,7 @@ export const skills = [
 export const education = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
+    img:"https://ik.imagekit.io/shakti13priya/btech.jpg?updatedAt=1752230015829",
     school: "Indian Institute of Information Technology Ranchi",
     date: "Nov 2022 - May 2026",
     grade: "7.75 CGPA | (Highest: 9.5) ",
@@ -411,7 +406,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "https://ik.imagekit.io/shakti13priya/12th.jpg?updatedAt=1752230015838",
     school: "Greendland Public School",
     date: "Apr 2019 - Apr 2021",
     grade: "88.6%",
@@ -420,7 +415,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img:"https://ik.imagekit.io/shakti13priya/10th.gif?updatedAt=1752230015793",
     school: "Bridgeford School, Ranchi",
     date: "Apr 2018 - Apr 2019",
     grade: "97.8%",
