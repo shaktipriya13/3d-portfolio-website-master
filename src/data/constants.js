@@ -10,7 +10,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/shaktipriya13",
   resume:
-    "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view?usp=drive_link",
+    "https://drive.google.com/file/d/18VXdOOqFGrEcFTjCJk3lknLl4xEwwAU1/view",
   linkedin: "https://www.linkedin.com/in/shaktipriya13/",
   // twitter: "https://twitter.com/RishavChanda",
   // insta: "https://www.instagram.com/rishav_chanda/",
@@ -44,6 +44,10 @@ export const skills = [
       {
         name: "HTML",
         image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+      },
+      {
+        name: "Tailwind CSS",
+        image: "file:///C:/Users/dell/AppData/Local/Temp/fb98ca51-c4ce-4893-afc5-7ddd862956b3_tailwindcss-logotype.zip.6b3/tailwindcss-logotype/tailwindcss-logotype-white.svg",
       },
       {
         name: "CSS",
@@ -258,8 +262,13 @@ export const skills = [
       {
         name: "Render",
         image:
+<<<<<<< HEAD
           "https://render.com/brand/render_1105076560.svg",
         },
+=======
+          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
+      },
+>>>>>>> db786f8e4fd95e0e393e437a59c4574e4f74a517
       {
         name: "VS Code",
         image:
@@ -285,137 +294,137 @@ export const skills = [
   },
 ];
 
-export const experiences = [
-  {
-    id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/neurobit.jpeg?alt=media&token=1cacbb7b-e5ea-4efb-9b3d-f5a31b9564ad",
-    role: "Frontend Engineer Intern",
-    company: "Neurobit",
-    date: "June 2023 - Nov 2023",
-    desc: "Enhanced user experiences on Neurobit PSG & Hybrid, Portals by resolving bugs & reduced load time by 40%. Built Neurobit Analytics portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query. Refactored previous code to TypeScript, updated with new dependency and integrated Vite with Jest for Unit Testing.",
-    skills: [
-      "ReactJS",
-      "Redux",
-      "NodeJs",
-      "Material UI",
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Screenshot%20from%202025-01-25%2022-38-31.png?alt=media&token=2785903f-1a4e-41f5-afd2-6adcfe56d058",
-  },
-  {
-    id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
-    role: "DevOps & Fullstack Engineering Intern",
-    company: "Flipr Inovations Pvt. Ltd.",
-    date: "Aug 2023 - Oct 2023",
-    desc: "Built Flipr Connect Platforms using React Js integrated GraphQL with AXIOS, created High level Design and Figma design. Built Backend with GraphQL and Node JS and connected with MongoDb - Reducing API calls by 20%. Dockerized and automated with Kubernetes & Jenkins CI/CD deployed in AWS-EC2 added Prometheus & Grafana for monitoring.",
-    skills: [
-      "Docker",
-      "Terraform",
-      "AWS",
-      "EC2",
-      "Portainer",
-      "Nginx",
-      "JavaScript",
-      "TypeScript",
-      "Node Js",
-      " Next Js",
-    ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1696514649120.jpeg?alt=media&token=e7f6757b-edfa-4138-a692-d6709eeef3e2",
-  },
-  {
-    id: 2,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Rudraksha.jpeg?alt=media&token=8f83f41e-d0a1-486f-9c7f-dd4cd1d09e8d",
-    role: "Android Developer Intern",
-    company: "Rudraksha Welffare Foundation",
-    date: "June 2021 - Oct 2021",
-    desc: "• Built RudraShakti - Astrologer App, with MVVM Architecture using Java and Android Studio integrating Firebase SDK. Created One to One video call integration with Socket.IO and Firebase cloud functions and integrated with Retrofit. Created Low Level Design and converted Figma design to XML code.",
-    skills: [
-      "Android",
-      "Java",
-      "Kotlin",
-      "XML",
-      "Node Js",
-      "Cloud Firestore",
-      "Firebase",
-      "Figma",
-    ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
-  },
-  {
-    id: 3,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
-    role: "Fullstack Externship",
-    company: "Flipr",
-    date: "June 2023 - July 2023",
-    desc: "Built an employee management full stack web app used Docker and deployed on AWS ec2. I was the top performer in the program.",
-    skills: [
-      "ReactJS",
-      "Redux",
-      "NodeJs",
-      "Material UI",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Docker",
-      "AWS",
-      "MongoDB",
-    ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1691181448873.jpeg?alt=media&token=ee85eb8f-7247-43cd-9a1d-ce9f58ea62a6",
-  },
-  {
-    id: 4,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/gdsc.jpeg?alt=media&token=c162329c-efaa-4be8-a173-8d3f4c48ea70",
-    role: "Android Developer",
-    company: "DSC KIIT",
-    date: "Nov2021 - Present",
-    desc: "As an Android developer at the Google Developers Student Club (GDCS), I have had the opportunity to work on exciting projects and collaborate with talented developers who share my passion for technology. Through my involvement with GDCS, I have also had the opportunity to host and participate in numerous events, including hackathons, study jams, and workshops.",
-    skills: [
-      "Leadership",
-      "Mobile Application Development",
-      "Kotlin",
-      "XML",
-      "Figma",
-    ],
-  },
-  {
-    id: 5,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
-    role: "Open Source Contributor ",
-    company: "GirlScript Summer of Code",
-    date: "May 2023 - Present",
-    desc: "Contributed to different open-source projects and learn from industry experts",
-  },
-];
+// export const experiences = [
+//   {
+//     id: 0,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/neurobit.jpeg?alt=media&token=1cacbb7b-e5ea-4efb-9b3d-f5a31b9564ad",
+//     role: "Frontend Engineer Intern",
+//     company: "Neurobit",
+//     date: "June 2023 - Nov 2023",
+//     desc: "Enhanced user experiences on Neurobit PSG & Hybrid, Portals by resolving bugs & reduced load time by 40%. Built Neurobit Analytics portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query. Refactored previous code to TypeScript, updated with new dependency and integrated Vite with Jest for Unit Testing.",
+//     skills: [
+//       "ReactJS",
+//       "Redux",
+//       "NodeJs",
+//       "Material UI",
+//       "HTML",
+//       "CSS",
+//       "JavaScript",
+//     ],
+//     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Screenshot%20from%202025-01-25%2022-38-31.png?alt=media&token=2785903f-1a4e-41f5-afd2-6adcfe56d058",
+//   },
+//   {
+//     id: 1,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+//     role: "DevOps & Fullstack Engineering Intern",
+//     company: "Flipr Inovations Pvt. Ltd.",
+//     date: "Aug 2023 - Oct 2023",
+//     desc: "Built Flipr Connect Platforms using React Js integrated GraphQL with AXIOS, created High level Design and Figma design. Built Backend with GraphQL and Node JS and connected with MongoDb - Reducing API calls by 20%. Dockerized and automated with Kubernetes & Jenkins CI/CD deployed in AWS-EC2 added Prometheus & Grafana for monitoring.",
+//     skills: [
+//       "Docker",
+//       "Terraform",
+//       "AWS",
+//       "EC2",
+//       "Portainer",
+//       "Nginx",
+//       "JavaScript",
+//       "TypeScript",
+//       "Node Js",
+//       " Next Js",
+//     ],
+//     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1696514649120.jpeg?alt=media&token=e7f6757b-edfa-4138-a692-d6709eeef3e2",
+//   },
+//   {
+//     id: 2,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Rudraksha.jpeg?alt=media&token=8f83f41e-d0a1-486f-9c7f-dd4cd1d09e8d",
+//     role: "Android Developer Intern",
+//     company: "Rudraksha Welffare Foundation",
+//     date: "June 2021 - Oct 2021",
+//     desc: "• Built RudraShakti - Astrologer App, with MVVM Architecture using Java and Android Studio integrating Firebase SDK. Created One to One video call integration with Socket.IO and Firebase cloud functions and integrated with Retrofit. Created Low Level Design and converted Figma design to XML code.",
+//     skills: [
+//       "Android",
+//       "Java",
+//       "Kotlin",
+//       "XML",
+//       "Node Js",
+//       "Cloud Firestore",
+//       "Firebase",
+//       "Figma",
+//     ],
+//     doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
+//   },
+//   {
+//     id: 3,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+//     role: "Fullstack Externship",
+//     company: "Flipr",
+//     date: "June 2023 - July 2023",
+//     desc: "Built an employee management full stack web app used Docker and deployed on AWS ec2. I was the top performer in the program.",
+//     skills: [
+//       "ReactJS",
+//       "Redux",
+//       "NodeJs",
+//       "Material UI",
+//       "HTML",
+//       "CSS",
+//       "JavaScript",
+//       "Docker",
+//       "AWS",
+//       "MongoDB",
+//     ],
+//     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1691181448873.jpeg?alt=media&token=ee85eb8f-7247-43cd-9a1d-ce9f58ea62a6",
+//   },
+//   {
+//     id: 4,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/gdsc.jpeg?alt=media&token=c162329c-efaa-4be8-a173-8d3f4c48ea70",
+//     role: "Android Developer",
+//     company: "DSC KIIT",
+//     date: "Nov2021 - Present",
+//     desc: "As an Android developer at the Google Developers Student Club (GDCS), I have had the opportunity to work on exciting projects and collaborate with talented developers who share my passion for technology. Through my involvement with GDCS, I have also had the opportunity to host and participate in numerous events, including hackathons, study jams, and workshops.",
+//     skills: [
+//       "Leadership",
+//       "Mobile Application Development",
+//       "Kotlin",
+//       "XML",
+//       "Figma",
+//     ],
+//   },
+//   {
+//     id: 5,
+//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
+//     role: "Open Source Contributor ",
+//     company: "GirlScript Summer of Code",
+//     date: "May 2023 - Present",
+//     desc: "Contributed to different open-source projects and learn from industry experts",
+//   },
+// ];
 
 export const education = [
   {
     id: 0,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
     school: "Indian Institute of Information Technology Ranchi",
-    date: "Oct 2021 - Sep 2025",
+    date: "Nov 2022 - May 2026",
     grade: "7.75 CGPA | (Highest: 9.5) ",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Kalinga Institute of Industrial Technology, Bhubaneswar. I have completed 4 semesters and have a CGPA of 8.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club (GDSC) at KIIT, where I am learning and working on exciting projects with a team of talented developers.",
+    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Indian Institute of Information Technology Ranchi.  I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. During my college journey I have solved over 600+ problems solved on coding platforms and my Top 10% ranking on LeetCode. I advanced to the penultimate round of Google Girl Hackathon 2k25 and was honored by the title of Miss IIIT at my college fest - Ephemere 2022 which reflects my leadership and people skills. ",
     degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
   },
   {
     id: 1,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
     school: "Greendland Public School",
-    date: "Apr 2019 - Apr 2025",
+    date: "Apr 2019 - Apr 2021",
     grade: "88.6%",
-    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
+    desc: "I completed my class 12 high school education at Greendland Public School, Ranchi, where I studied Computer Science, among with other subjects.",
     degree: "CBSE(XII), with Computer Science",
   },
   {
     id: 2,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
     school: "Bridgeford School, Ranchi",
-    date: "Apr 2017 - Apr 2019",
+    date: "Apr 2018 - Apr 2019",
     grade: "97.8%",
-    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
+    desc: "I completed my class 10 education at Bridgeford School, Ranchi, where I studied Science with Computer Application.",
     degree: "CBSE(X), Science with Computer",
   },
 ];
@@ -443,194 +452,229 @@ export const projects = [
     webapp: "https://write-flow-git-main-priyashakti68-gmailcoms-projects.vercel.app/",
   },
   {
-    id: 9,
-    title: "Trackify",
-    date: "Jun 2023 - Jul 2023",
-    description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255202516-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-    tags: [
-      "Docker",
-      "AWS",
-      "DuckDNS",
-      "Eslint",
-      "Husky",
-      "CI/CD",
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-    ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify-management.netlify.app/",
-  },
-  {
-    id: 0,
-    title: "Podstream",
-    date: "Apr 2023 - May 2023",
-    description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
-    webapp: "https://podstream.netlify.app/",
-    member: [
-      {
-        name: "Shakti Priya",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: "Vexa",
-    date: "Oct 2022 - Jan 2023",
-    description:
-      "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
-    tags: [
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "NodeMailer",
-    ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Project-Management-App",
-    webapp: "https://vexa-app.netlify.app/",
-  },
-  {
-    id: 2,
-    title: "Brain Tumor Detection",
-    date: "Jan 2023 - Mar 2023",
-    description:
-      "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
-    image:
-      "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
-    webapp: "https://brain-tumor.netlify.app/",
-    member: [
-      {
-        name: "Shakti Priya",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Buckoid",
-    date: "Dec 2021 - Apr 2022",
-    description:
-      "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
-    image:
-      "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-    tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Buckoid-Android-App",
-    webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
-  },
-  {
     id: 10,
-    title: "Job Finding App",
-    date: "Jun 2023 - Jul 2023",
+    title: "PingDrop",
+    date: "Jun 2025",
     description:
-      "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
+      "PingDrop is a real-time chat application built using the MERN stack and Socket.io. It allows users to chat instantly with online status updates. The frontend is built with React, Redux Toolkit, and Tailwind CSS, offering a responsive and interactive UI. Cloudinary is used for image uploads, and JWT-based authentication ensures secure user sessions. \nThe backend is developed using Express.js and Mongoose, connected to MongoDB Atlas, and deployed on Render for scalability and performance.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-    tags: ["React Native", "JavaScript", "Axios"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Job-finder-App",
-    webapp: "https://github.com/rishavchanda/Job-finder-App",
-  },
-  {
-    id: 4,
-    title: "Whatsapp Clone",
-    date: "Jul 2021",
-    description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-    tags: ["React Js", "Firebase", "Firestore", "Node JS"],
+      "https://user-images.githubusercontent.com/64485885/255202516-e1f89b04-2788-45b0-abc2-9dec616669e2.png", // Replace this with a relevant screenshot of PingDrop
+    tags: [
+      "MERN",
+      "Socket.io",
+      "Cloudinary",
+      "JWT",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "MongoDB Atlas",
+      "Render",
+      "Express.js",
+      "Mongoose",
+    ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-    webapp: "https://whatsapp-clone-rishav.web.app",
+    github: "https://github.com/shaktipriya13/PingDrop", // Replace with actual repo link
+    webapp: "https://pingdrop.onrender.com/login/", // Replace with actual live app link if hosted
   },
+
   {
-    id: 5,
-    title: "Todo Web App",
-    date: "Jun 2021",
+    id: 11,
+    title: "Timora",
+    date: "May 2025",
     description:
-      " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
+      "Timora is a full-stack e-commerce platform focused on selling premium watches. It allows users to browse products, manage their cart, and make secure payments. The application features a robust RESTful API built with Express.js and Node.js, incorporating secure authentication via JWT, password hashing with bcrypt, and role-based access control. Razorpay is integrated for smooth and secure payment processing. The entire platform is deployed on Render, backed by MongoDB Atlas for reliable data storage and scalability.",
     image:
-      "https://camo.githubusercontent.com/84ac6ab6f378348ef28d8184062b7e9e3511a1252ae3966eaa49e8e998f732a7/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f74253230283938292e706e673f616c743d6d6564696126746f6b656e3d33643335646366322d626666322d343730382d393031632d343232383866383332386633",
-    tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
+      "https://user-images.githubusercontent.com/64485885/255202516-e1f89b04-2788-45b0-abc2-9dec616669e2.png", // Replace this with a screenshot of Timora
+    tags: [
+      "MERN",
+      "Razorpay",
+      "JWT",
+      "Bcrypt",
+      "MongoDB Atlas",
+      "Render",
+      "Express.js",
+      "Node.js",
+      "React.js",
+      "E-commerce",
+    ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Todo-Web-App",
-    webapp: "https://rishav-react-todo.netlify.app/",
+    github: "https://github.com/shaktipriya13/Timora--Ecommerce-website", // Replace with actual repo link
+    webapp: "https://timora-shaktipriya.onrender.com/", // Replace with actual deployed app link
   },
+
   {
-    id: 6,
-    title: "Breaking Bad",
-    date: "Jun 2021",
+    id: 12,
+    title: "Music App NextJS",
+    date: "April 2025",
     description:
-      "A simple react app that shows the characters of the famous TV series Breaking Bad. It uses the Breaking Bad API to fetch the data. It also has a search bar to search for a particular character.",
+      "Music App NextJS is a fully responsive website designed for a music academy to showcase and enroll students in various music courses. Built using Next.js, TypeScript, Tailwind CSS, and Acertainity UI, it offers an engaging UI with interactive components and smooth transitions. The platform uses Framer Motion for animations and integrates Acertainity UI components.",
     image:
-      "https://camo.githubusercontent.com/937774368308a82419f53dd6eeb4a8675780e119636488b4e3cfe5d34859a72a/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f7425323028313534292e706e673f616c743d6d6564696126746f6b656e3d65613439383630632d303435362d343333342d616435372d336239346663303333363263",
-    tags: ["React Js", "API", "Axios", "Node JS"],
+      "https://user-images.githubusercontent.com/64485885/255202516-e1f89b04-2788-45b0-abc2-9dec616669e2.png", // Replace with a real screenshot of the app
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Acertainity UI",
+      "ESLint",
+      "PostCSS",
+      "Responsive Design",
+      "Modular Components"
+    ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Breaking-Bad",
-    webapp: "https://breaking-bad-webapp.netlify.app",
+    github: "file:///D:/USERS%20from%20C%20drive/Downloads/Resume_shakti_priya.pdf",
+    webapp: "https://music-courses-selling-website-l6f6.vercel.app/",
+  },
+
+  {
+    id: 14,
+    title: "TubNest Backend API",
+    date: "May 2025",
+    description:
+      "TubNest is the backend of a video-sharing platform, built using Node.js, Express.js, and MongoDB. The project implements complete RESTful APIs for user authentication, video upload, comment management, and like/dislike functionality. It uses JWT for secure authentication, Multer for video uploads, and Cloudinary for media storage. The backend is modular, scalable, and follows best practices with proper error handling, validation (using express-validator), and secure middleware. Deployed on Render and tested with Postman, the API enables robust interaction between frontend and database.",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234567890-tubnest-backend.png", // Replace with actual screenshot or API diagram if available
+    tags: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT Authentication",
+      "REST API",
+      "Cloudinary",
+      "Multer",
+      "Postman",
+      "Render Deployment",
+      "Secure Middleware"
+    ],
+    category: "backend",
+    github: "https://github.com/shaktipriya13/TubeNest-A-Video-Streaming-Social-Platform-Backend", // Replace if your repo URL is different
+    webapp: "https://tubenest-backend-a-video-streaming-social.onrender.com/", // Replace with actual deployed backend base URL if available
   },
   {
-    id: 7,
-    title: "Quiz App",
-    date: "Dec 2020 - Jan 2021",
+    "id": "88",
+    "title": "Chapter Performance API",
+    "date": "June 2025",
+    "desc": "A RESTful API for managing chapters in a performance dashboard with filtering, pagination, caching using Redis, secure uploads, and rate-limiting. Deployed on Render and AWS EC2 with GitHub Actions CI/CD.",
+    "image": "/projects/chapter-api.png",
+    "tags": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redis",
+      "Multer",
+      "JWT",
+      "CI/CD",
+      "Render",
+      "AWS EC2"
+    ],
+    "category": "backend",
+    "github": "https://github.com/shaktipriya13/Chapter-Performance-API",
+    "webapp": "https://www.postman.com/shakti-priya/mathongo-api/collection/ffg7utw/mathongo-chapter-performance-dashboard-api?action=share&creator=37155607"
+  },
+
+
+  // {
+  //   id: 10,
+  //   title: "Job Finding App",
+  //   date: "Jun 2023 - Jul 2023",
+  //   description:
+  //     "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
+  //   image:
+  //     "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
+  //   tags: ["React Native", "JavaScript", "Axios"],
+  //   category: "android app",
+  //   github: "https://github.com/rishavchanda/Job-finder-App",
+  //   webapp: "https://github.com/rishavchanda/Job-finder-App",
+  // },
+
+  // {
+  //   id: 5,
+  //   title: "Currency Converter App",
+  //   date: "April 2025",
+  //   description:
+  //     " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
+  //   image:
+  //     "https://camo.githubusercontent.com/84ac6ab6f378348ef28d8184062b7e9e3511a1252ae3966eaa49e8e998f732a7/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f74253230283938292e706e673f616c743d6d6564696126746f6b656e3d33643335646366322d626666322d343730382d393031632d343232383866383332386633",
+  //   tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
+  //   category: "web app",
+  //   github: "https://github.com/rishavchanda/Todo-Web-App",
+  //   webapp: "https://rishav-react-todo.netlify.app/",
+  // },
+  {
+    id: 16,
+    title: "Currency Converter",
+    date: "April 2025",
     description:
-      "A android quiz app made with Java and Firebase. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the quiz categories and can create a new quiz. It has a leaderboard where users can see the top 10 scorers. It has a search bar where users can search for a particular quiz.",
+      "A clean and responsive React app that converts currency values in real time using a public exchange rate API. It demonstrates the use of custom React hooks, reusable components, and API integration. Built with performance and simplicity in mind.",
     image:
-      "https://github-production-user-asset-6210df.s3.amazonaws.com/64485885/239726262-c1b061d1-d9d0-42ef-9f1c-0412d14bc4f6.gif",
-    tags: ["Java", "Android Studio", "Firebase", "Google Auth"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Quiz-Earn",
-    webapp: "https://github.com/rishavchanda/Quiz-Earn",
+      "https://user-images.githubusercontent.com/00000000/placeholder-currency-converter-screenshot.png",
+    tags: ["React Js", "Custom Hooks", "API", "Netlify"],
+    category: "web app",
+    github: "https://github.com/shaktipriya13/currencyConvertor",
+    webapp: "https://currency-convertor-shaktip.netlify.app/",
+  },
+
+  // {
+  //   id: 6,
+  //   title: "Breaking Bad",
+  //   date: "Jun 2021",
+  //   description:
+  //     "A simple react app that shows the characters of the famous TV series Breaking Bad. It uses the Breaking Bad API to fetch the data. It also has a search bar to search for a particular character.",
+  //   image:
+  //     "https://camo.githubusercontent.com/937774368308a82419f53dd6eeb4a8675780e119636488b4e3cfe5d34859a72a/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f7425323028313534292e706e673f616c743d6d6564696126746f6b656e3d65613439383630632d303435362d343333342d616435372d336239346663303333363263",
+  //   tags: ["React Js", "API", "Axios", "Node JS"],
+  //   category: "web app",
+  //   github: "https://github.com/rishavchanda/Breaking-Bad",
+  //   webapp: "https://breaking-bad-webapp.netlify.app",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Quiz App",
+  //   date: "Dec 2020 - Jan 2021",
+  //   description:
+  //     "A android quiz app made with Java and Firebase. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the quiz categories and can create a new quiz. It has a leaderboard where users can see the top 10 scorers. It has a search bar where users can search for a particular quiz.",
+  //   image:
+  //     "https://github-production-user-asset-6210df.s3.amazonaws.com/64485885/239726262-c1b061d1-d9d0-42ef-9f1c-0412d14bc4f6.gif",
+  //   tags: ["Java", "Android Studio", "Firebase", "Google Auth"],
+  //   category: "android app",
+  //   github: "https://github.com/rishavchanda/Quiz-Earn",
+  //   webapp: "https://github.com/rishavchanda/Quiz-Earn",
+  // },
+  // {
+  //   id: 8,
+  //   title: "Face Recognition",
+  //   date: "Jan 2021",
+  //   description:
+  //     "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
+  //   image:
+  //     "https://dontrepeatyourself.org/media/face-recognition-with-python-dlib-and-deep-learning_cezKZBj.png",
+  //   tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
+  //   category: "machine learning",
+  //   github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
+  //   webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
+  // },
+  {
+    "id": 7,
+    "title": "React Password Generator",
+    "date": "Feb 2025",
+    "description": "An interactive and user-friendly password generator built with React and styled using Tailwind CSS. It allows users to generate secure passwords with custom length, numbers, and special characters. Includes clipboard copy support and real-time password generation using React Hooks.",
+    "image": "https://user-images.githubusercontent.com/00000000/placeholder-password-generator-screenshot.png",
+    "tags": ["React Js", "Hooks", "Tailwind CSS", "Clipboard API"],
+    "category": "web app",
+    "github": "https://github.com/shaktipriya13/Password-Generator",
+    "webapp": "https://password-generator-shaktip.netlify.app/"
   },
   {
-    id: 8,
-    title: "Face Recognition",
-    date: "Jan 2021",
-    description:
-      "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
-    image:
-      "https://dontrepeatyourself.org/media/face-recognition-with-python-dlib-and-deep-learning_cezKZBj.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-    webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-  },
+    "id": 7,
+    "title": "Travelia - Landing Page",
+    "date": "Jul 2025",
+    "description": "Travelia is a fully responsive travel-themed landing page built with HTML, CSS, and JavaScript. Designed with a mobile-first approach, it offers an engaging, clean UI and intuitive navigation. Ideal for travel agencies or developers learning responsive web design.",
+    "image": "https://user-images.githubusercontent.com/00000000/travelia-project-screenshot.png",
+    "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    "category": "web app",
+    "github": "https://github.com/your-username/travelia",
+    "webapp": "https://your-live-demo-link.netlify.app"
+  }
+
+
 ];
 

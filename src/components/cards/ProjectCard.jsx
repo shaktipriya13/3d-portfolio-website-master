@@ -135,6 +135,7 @@ const StyledButton = styled.a`
 `;
 const ButtonsContainer = styled.div`
   display: flex;
+<<<<<<< HEAD
   gap: 20px;
   margin-top: 20px;
 
@@ -145,6 +146,19 @@ const ButtonsContainer = styled.div`
     align-items: center;
   }
 `;
+=======
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  gap: 14px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+`;
+
+>>>>>>> db786f8e4fd95e0e393e437a59c4574e4f74a517
 const ProjectCard = ({ project }) => {
   return (
     <Card>
