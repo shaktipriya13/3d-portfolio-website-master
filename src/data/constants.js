@@ -432,7 +432,7 @@ export const projects = [
     description:
       "WriteFlow is an AI-powered full-stack blogging platform that allows users to generate, manage, and publish blog content with ease. Built using the MERN stack, it integrates Google Gemini for content generation and ImageKit for optimized image handling. Includes a secure admin dashboard for blog and comment moderation.",
     image:
-      "https://raw.githubusercontent.com/ShaktiPriya/WriteFlow/main/client/src/assets/writeflow-cover.jpg", // Replace with actual image URL from your repo
+      "https://ik.imagekit.io/shakti13priya/blog.png?updatedAt=1752230632957",
     tags: [
       "React Js",
       "Tailwind CSS",
@@ -453,7 +453,7 @@ export const projects = [
     description:
       "PingDrop is a real-time chat application built using the MERN stack and Socket.io. It allows users to chat instantly with online status updates. The frontend is built with React, Redux Toolkit, and Tailwind CSS, offering a responsive and interactive UI. Cloudinary is used for image uploads, and JWT-based authentication ensures secure user sessions. \nThe backend is developed using Express.js and Mongoose, connected to MongoDB Atlas, and deployed on Render for scalability and performance.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255202516-e1f89b04-2788-45b0-abc2-9dec616669e2.png", // Replace this with a relevant screenshot of PingDrop
+        "https://ik.imagekit.io/shakti13priya/chatapp.png?updatedAt=1752230632711",
     tags: [
       "MERN",
       "Socket.io",
@@ -478,7 +478,7 @@ export const projects = [
     description:
       "Timora is a full-stack e-commerce platform focused on selling premium watches. It allows users to browse products, manage their cart, and make secure payments. The application features a robust RESTful API built with Express.js and Node.js, incorporating secure authentication via JWT, password hashing with bcrypt, and role-based access control. Razorpay is integrated for smooth and secure payment processing. The entire platform is deployed on Render, backed by MongoDB Atlas for reliable data storage and scalability.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255202516-e1f89b04-2788-45b0-abc2-9dec616669e2.png", // Replace this with a screenshot of Timora
+        "https://ik.imagekit.io/shakti13priya/ecome.png?updatedAt=1752230633180",
     tags: [
       "MERN",
       "Razorpay",
@@ -503,7 +503,7 @@ export const projects = [
     description:
       "Music App NextJS is a fully responsive website designed for a music academy to showcase and enroll students in various music courses. Built using Next.js, TypeScript, Tailwind CSS, and Acertainity UI, it offers an engaging UI with interactive components and smooth transitions. The platform uses Framer Motion for animations and integrates Acertainity UI components.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255202516-e1f89b04-2788-45b0-abc2-9dec616669e2.png", // Replace with a real screenshot of the app
+        "https://ik.imagekit.io/shakti13priya/music.png?updatedAt=1752230636865",
     tags: [
       "Next.js",
       "TypeScript",
@@ -549,7 +549,7 @@ export const projects = [
     "title": "Chapter Performance API",
     "date": "June 2025",
     "desc": "A RESTful API for managing chapters in a performance dashboard with filtering, pagination, caching using Redis, secure uploads, and rate-limiting. Deployed on Render and AWS EC2 with GitHub Actions CI/CD.",
-    "image": "/projects/chapter-api.png",
+    "image": "https://ik.imagekit.io/shakti13priya/chapter.png?updatedAt=1752230632037",
     "tags": [
       "Node.js",
       "Express",
@@ -601,7 +601,7 @@ export const projects = [
     description:
       "A clean and responsive React app that converts currency values in real time using a public exchange rate API. It demonstrates the use of custom React hooks, reusable components, and API integration. Built with performance and simplicity in mind.",
     image:
-      "https://user-images.githubusercontent.com/00000000/placeholder-currency-converter-screenshot.png",
+        "https://ik.imagekit.io/shakti13priya/curr.png?updatedAt=1752234794155",
     tags: ["React Js", "Custom Hooks", "API", "Netlify"],
     category: "web app",
     github: "https://github.com/shaktipriya13/currencyConvertor",
@@ -652,7 +652,8 @@ export const projects = [
     "title": "React Password Generator",
     "date": "Feb 2025",
     "description": "An interactive and user-friendly password generator built with React and styled using Tailwind CSS. It allows users to generate secure passwords with custom length, numbers, and special characters. Includes clipboard copy support and real-time password generation using React Hooks.",
-    "image": "https://user-images.githubusercontent.com/00000000/placeholder-password-generator-screenshot.png",
+    "image": 
+      "https://ik.imagekit.io/shakti13priya/pswd.png?updatedAt=1752234793821",
     "tags": ["React Js", "Hooks", "Tailwind CSS", "Clipboard API"],
     "category": "web app",
     "github": "https://github.com/shaktipriya13/Password-Generator",
