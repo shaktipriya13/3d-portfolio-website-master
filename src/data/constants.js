@@ -442,7 +442,7 @@ export const projects = [
       "Google Gemini API",
       "ImageKit API"
     ],
-    category: "web app",
+    category: "fullstack",
     github: "https://github.com/shaktipriya13/WriteFlow-MERN-BlogApp",
     webapp: "https://write-flow-git-main-priyashakti68-gmailcoms-projects.vercel.app/",
   },
@@ -466,7 +466,7 @@ export const projects = [
       "Express.js",
       "Mongoose",
     ],
-    category: "web app",
+    category: "fullstack",
     github: "https://github.com/shaktipriya13/PingDrop", // Replace with actual repo link
     webapp: "https://pingdrop.onrender.com/login/", // Replace with actual live app link if hosted
   },
@@ -491,7 +491,7 @@ export const projects = [
       "React.js",
       "E-commerce",
     ],
-    category: "web app",
+    category: "fullstack",
     github: "https://github.com/shaktipriya13/Timora--Ecommerce-website", // Replace with actual repo link
     webapp: "https://timora-shaktipriya.onrender.com/", // Replace with actual deployed app link
   },
@@ -515,7 +515,7 @@ export const projects = [
       "Responsive Design",
       "Modular Components"
     ],
-    category: "web app",
+    category: "frontend",
     github: "file:///D:/USERS%20from%20C%20drive/Downloads/Resume_shakti_priya.pdf",
     webapp: "https://music-courses-selling-website-l6f6.vercel.app/",
   },
@@ -604,7 +604,7 @@ export const projects = [
     image:
         "https://ik.imagekit.io/shakti13priya/curr.png?updatedAt=1752234794155",
     tags: ["React Js", "Custom Hooks", "API", "Netlify"],
-    category: "web app",
+    category: "frontend",
     github: "https://github.com/shaktipriya13/currencyConvertor",
     webapp: "https://currency-convertor-shaktip.netlify.app/",
   },
@@ -656,7 +656,7 @@ export const projects = [
     "image": 
       "https://ik.imagekit.io/shakti13priya/pswd.png?updatedAt=1752234793821",
     "tags": ["React Js", "Hooks", "Tailwind CSS", "Clipboard API"],
-    "category": "web app",
+    "category": "frontend",
     "github": "https://github.com/shaktipriya13/Password-Generator",
     "webapp": "https://password-generator-shaktip.netlify.app/"
   },
@@ -668,7 +668,7 @@ export const projects = [
     "image": 
     "https://ik.imagekit.io/shakti13priya/tourist.png?updatedAt=1752235199019",
     "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    "category": "web app",
+    "category": "frontend",
     "github": "https://github.com/your-username/travelia",
     "webapp": "https://travelia-tours-shaktip.netlify.app/"
   }
