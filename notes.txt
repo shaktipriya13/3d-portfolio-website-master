@@ -14,3 +14,5 @@ When you click on something (like a navbar link), the page automatically scrolls
 the tilt effect is coming from React-tilt package
 
 in projects section clip path has been used to show the triangular effect above it
+
+Hero section has my image
