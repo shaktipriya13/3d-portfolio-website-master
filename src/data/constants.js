@@ -10,7 +10,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/shaktipriya13",
   resume:
-    "https://drive.google.com/file/d/1S9lDUbB_YxKMpmon3L_jHizMxnatgKnw/view?usp=sharing",
+    "https://drive.google.com/file/d/1w_rGdO5Buy1-ji3626zMxrdGf8Wv9Dps/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/shaktipriya13/",
   // twitter: "https://twitter.com/RishavChanda",
   // insta: "https://www.instagram.com/rishav_chanda/",
