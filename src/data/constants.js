@@ -431,7 +431,7 @@ export const projects = [
     date: "Aug 2025 - Sept 2025",
     description: "Pixxel is an AI-powered image editing platform with real-time transformations, secure Clerk authentication, optimized performance via ImageKit, and exclusive Pro features - advanced AI tools.",
       image:
-      "https://ik.imagekit.io/shakti13priya/blog.png?updatedAt=1752230632957",
+      "https://ik.imagekit.io/shakti13priya/Screenshot%202025-09-09%20192859.png?updatedAt=1757426377646",
     tags: [
       "Next JS 15",
       "React Js",
