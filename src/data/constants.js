@@ -492,30 +492,30 @@ export const projects = [
     webapp: "https://pingdrop.onrender.com/login/", // Replace with actual live app link if hosted
   },
 
-  {
-    id: 11,
-    title: "Timora",
-    date: "May 2025",
-    description:
-      "Timora is a full-stack e-commerce platform focused on selling premium watches. It allows users to browse products, manage their cart, and make secure payments. The application features a robust RESTful API built with Express.js and Node.js, incorporating secure authentication via JWT, password hashing with bcrypt, and role-based access control. Razorpay is integrated for smooth and secure payment processing. The entire platform is deployed on Render, backed by MongoDB Atlas for reliable data storage and scalability.",
-    image:
-        "https://ik.imagekit.io/shakti13priya/ecome.png?updatedAt=1752230633180",
-    tags: [
-      "MERN",
-      "Razorpay",
-      "JWT",
-      "Bcrypt",
-      "MongoDB Atlas",
-      "Render",
-      "Express.js",
-      "Node.js",
-      "React.js",
-      "E-commerce",
-    ],
-    category: "fullstack",
-    github: "https://github.com/shaktipriya13/Timora--Ecommerce-website", // Replace with actual repo link
-    webapp: "https://timora-shaktipriya.onrender.com/", // Replace with actual deployed app link
-  },
+  // {
+  //   id: 11,
+  //   title: "Timora",
+  //   date: "May 2025",
+  //   description:
+  //     "Timora is a full-stack e-commerce platform focused on selling premium watches. It allows users to browse products, manage their cart, and make secure payments. The application features a robust RESTful API built with Express.js and Node.js, incorporating secure authentication via JWT, password hashing with bcrypt, and role-based access control. Razorpay is integrated for smooth and secure payment processing. The entire platform is deployed on Render, backed by MongoDB Atlas for reliable data storage and scalability.",
+  //   image:
+  //       "https://ik.imagekit.io/shakti13priya/ecome.png?updatedAt=1752230633180",
+  //   tags: [
+  //     "MERN",
+  //     "Razorpay",
+  //     "JWT",
+  //     "Bcrypt",
+  //     "MongoDB Atlas",
+  //     "Render",
+  //     "Express.js",
+  //     "Node.js",
+  //     "React.js",
+  //     "E-commerce",
+  //   ],
+  //   category: "fullstack",
+  //   github: "https://github.com/shaktipriya13/Timora--Ecommerce-website", // Replace with actual repo link
+  //   webapp: "https://timora-shaktipriya.onrender.com/", // Replace with actual deployed app link
+  // },
 
   {
     id: 12,
