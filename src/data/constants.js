@@ -11,11 +11,13 @@ export const Bio = {
   github: "https://github.com/shaktipriya13",
   resume:
     // "https://drive.google.com/file/d/1w_rGdO5Buy1-ji3626zMxrdGf8Wv9Dps/view?usp=sharing",
-    "https://drive.google.com/file/d/1FRjl3QztWy3LH0AIcQkH-Vfh68Olufzp/view?usp=sharing",
+    // "https://drive.google.com/file/d/1FRjl3QztWy3LH0AIcQkH-Vfh68Olufzp/view?usp=sharing",
+    
   linkedin: "https://www.linkedin.com/in/shaktipriya13/",
   // twitter: "https://twitter.com/RishavChanda",
   // insta: "https://www.instagram.com/rishav_chanda/",
   // facebook: "https://www.facebook.com/rishav.chanda.165/",
+  "https://drive.google.com/file/d/1w2r-KCUBGUXkanzlm8Iacz6JhDObS3_C/view",
 };
 
 export const skills = [
