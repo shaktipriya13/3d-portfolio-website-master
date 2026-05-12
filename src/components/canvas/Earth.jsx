@@ -33,12 +33,12 @@ const EarthCanvas = () => {
         <pointLight
           position={[-8, -5, -8]}
           intensity={0.6}
-          color="#854CE6"
+          color="#E8920C"
         />
         <pointLight
           position={[8, 5, 8]}
           intensity={0.3}
-          color="#cd1cb5"
+          color="#C0501A"
         />
         <OrbitControls
           autoRotate

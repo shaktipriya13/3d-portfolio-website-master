@@ -44,7 +44,7 @@ const Title = styled.div`
     135deg,
     ${({ theme }) => theme.text_primary} 0%,
     ${({ theme }) => theme.primary} 55%,
-    #cd1cb5 100%
+    #C0501A 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -57,7 +57,7 @@ const Title = styled.div`
 const TitleUnderline = styled.div`
   width: 56px;
   height: 4px;
-  background: linear-gradient(90deg, ${({ theme }) => theme.primary}, #cd1cb5);
+  background: linear-gradient(90deg, ${({ theme }) => theme.primary}, #C0501A);
   border-radius: 2px;
   margin: 10px auto 0;
 `;
@@ -110,7 +110,7 @@ const InfoHeadingAccent = styled.span`
   background: linear-gradient(
     135deg,
     ${({ theme }) => theme.primary},
-    #cd1cb5
+    #C0501A
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -151,8 +151,8 @@ const LinkIconBox = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: rgba(133, 76, 230, 0.1);
-  border: 1px solid rgba(133, 76, 230, 0.22);
+  background: rgba(232, 146, 12, 0.1);
+  border: 1px solid rgba(232, 146, 12, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +161,7 @@ const LinkIconBox = styled.div`
   transition: all 0.22s ease;
 
   ${ContactLinkItem}:hover & {
-    background: rgba(133, 76, 230, 0.2);
+    background: rgba(232, 146, 12, 0.2);
     border-color: ${({ theme }) => theme.primary};
     box-shadow: 0 0 14px ${({ theme }) => theme.primary + "40"};
   }
@@ -172,7 +172,7 @@ const Divider = styled.div`
   height: 1px;
   background: linear-gradient(
     90deg,
-    ${({ theme }) => theme.primary + "40"},
+    ${({ theme }) => theme.primary + "44"},
     transparent
   );
   margin: 28px 0;
@@ -202,10 +202,10 @@ const GreenDot = styled.span`
 `;
 
 const FormCard = styled(motion.form)`
-  background: rgba(23, 23, 33, 0.82);
+  background: rgba(28, 17, 7, 0.84);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(133, 76, 230, 0.15);
+  border: 1px solid rgba(232, 146, 12, 0.16);
   border-radius: 20px;
   padding: 32px;
   display: flex;
@@ -224,7 +224,7 @@ const FormCard = styled(motion.form)`
     background: linear-gradient(
       90deg,
       ${({ theme }) => theme.primary},
-      #cd1cb5,
+      #C0501A,
       transparent
     );
   }
@@ -253,7 +253,7 @@ const InputLabel = styled.label`
 
 const Input = styled.input`
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(133, 76, 230, 0.2);
+  border: 1px solid rgba(232, 146, 12, 0.22);
   border-radius: 10px;
   padding: 12px 16px;
   font-size: 14.5px;
@@ -270,14 +270,14 @@ const Input = styled.input`
 
   &:focus {
     border-color: ${({ theme }) => theme.primary};
-    background: rgba(133, 76, 230, 0.06);
-    box-shadow: 0 0 0 3px rgba(133, 76, 230, 0.12);
+    background: rgba(232, 146, 12, 0.06);
+    box-shadow: 0 0 0 3px rgba(232, 146, 12, 0.14);
   }
 `;
 
 const Textarea = styled.textarea`
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(133, 76, 230, 0.2);
+  border: 1px solid rgba(232, 146, 12, 0.22);
   border-radius: 10px;
   padding: 12px 16px;
   font-size: 14.5px;
@@ -297,8 +297,8 @@ const Textarea = styled.textarea`
 
   &:focus {
     border-color: ${({ theme }) => theme.primary};
-    background: rgba(133, 76, 230, 0.06);
-    box-shadow: 0 0 0 3px rgba(133, 76, 230, 0.12);
+    background: rgba(232, 146, 12, 0.06);
+    box-shadow: 0 0 0 3px rgba(232, 146, 12, 0.14);
   }
 `;
 
@@ -317,7 +317,7 @@ const SubmitButton = styled.button`
   background: linear-gradient(
     135deg,
     ${({ theme }) => theme.primary},
-    #cd1cb5
+    #C0501A
   );
   color: #fff;
   box-shadow: 0 0 20px ${({ theme }) => theme.primary + "50"};

@@ -43,7 +43,7 @@ const Title = styled.div`
     135deg,
     ${({ theme }) => theme.text_primary} 0%,
     ${({ theme }) => theme.primary} 55%,
-    #cd1cb5 100%
+    #C0501A 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -56,7 +56,7 @@ const Title = styled.div`
 const TitleUnderline = styled.div`
   width: 56px;
   height: 4px;
-  background: linear-gradient(90deg, ${({ theme }) => theme.primary}, #cd1cb5);
+  background: linear-gradient(90deg, ${({ theme }) => theme.primary}, #C0501A);
   border-radius: 2px;
   margin: 10px auto 0;
 `;
@@ -90,7 +90,7 @@ const FilterPill = styled.button`
     ${({ active, theme }) => (active ? theme.primary : theme.primary + "40")};
   background: ${({ active, theme }) =>
     active
-      ? `linear-gradient(135deg, ${theme.primary}28, #cd1cb518)`
+      ? `linear-gradient(135deg, ${theme.primary}28, #C0501A18)`
       : "transparent"};
   color: ${({ active, theme }) =>
     active ? theme.primary : theme.text_secondary};

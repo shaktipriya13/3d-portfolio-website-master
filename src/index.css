@@ -20,18 +20,18 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #222a35;
+  background: #18110A;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #575c66;
+  background: #6B4B28;
   border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #626970;
+  background: #8A6240;
 }
 
 ::-webkit-backdrop-filter {

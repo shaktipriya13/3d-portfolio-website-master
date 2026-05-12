@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  background: rgba(17, 25, 40, 0.83);
-  border: 1px solid rgba(133, 76, 230, 0.2);
+  background: rgba(22, 14, 6, 0.85);
+  border: 1px solid rgba(232, 146, 12, 0.2);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
+  box-shadow: rgba(192, 80, 26, 0.1) 0px 4px 24px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease,
     transform 0.25s ease;
 
   &:hover {
-    border-color: rgba(133, 76, 230, 0.5);
-    box-shadow: rgba(133, 76, 230, 0.22) 0px 8px 36px;
+    border-color: rgba(232, 146, 12, 0.5);
+    box-shadow: rgba(232, 146, 12, 0.2) 0px 8px 36px;
     transform: translateY(-4px);
   }
 `;
@@ -22,7 +22,7 @@ const Card = styled.div`
 const AccentBar = styled.div`
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #854ce6, #a78bfa, #6d28d9);
+  background: linear-gradient(90deg, #E8920C, #FBB346, #C0501A);
   flex-shrink: 0;
 `;
 
@@ -45,7 +45,7 @@ const SchoolLogo = styled.img`
   height: 52px;
   border-radius: 10px;
   object-fit: cover;
-  border: 1px solid rgba(133, 76, 230, 0.25);
+  border: 1px solid rgba(232, 146, 12, 0.25);
   background: rgba(255, 255, 255, 0.05);
   flex-shrink: 0;
 `;
@@ -71,7 +71,7 @@ const SchoolName = styled.div`
 const DateText = styled.div`
   font-size: 11px;
   font-weight: 500;
-  color: #a78bfa;
+  color: #FBB346;
 `;
 
 const Degree = styled.div`
@@ -103,9 +103,9 @@ const GradeBadge = styled.span`
   font-weight: 600;
   padding: 3px 12px;
   border-radius: 20px;
-  background: rgba(133, 76, 230, 0.12);
-  border: 1px solid rgba(133, 76, 230, 0.35);
-  color: #a78bfa;
+  background: rgba(232, 146, 12, 0.12);
+  border: 1px solid rgba(232, 146, 12, 0.35);
+  color: #FBB346;
 `;
 
 const Divider = styled.div`
@@ -137,14 +137,14 @@ const ToggleBtn = styled.button`
   cursor: pointer;
   font-size: 12px;
   font-weight: 600;
-  color: #854ce6;
+  color: #E8920C;
   display: flex;
   align-items: center;
   gap: 4px;
   transition: color 0.2s ease;
 
   &:hover {
-    color: #a78bfa;
+    color: #FBB346;
   }
 `;
 

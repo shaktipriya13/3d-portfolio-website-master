@@ -12,9 +12,9 @@ const CardWrapper = styled.div`
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #854ce6;
-    border: 3px solid #090917;
-    box-shadow: 0 0 0 2px #854ce6, 0 0 14px rgba(133, 76, 230, 0.7);
+    background: #E8920C;
+    border: 3px solid #0C0804;
+    box-shadow: 0 0 0 2px #E8920C, 0 0 14px rgba(232, 146, 12, 0.7);
     z-index: 1;
   }
 
@@ -26,17 +26,17 @@ const CardWrapper = styled.div`
 `;
 
 const Card = styled.div`
-  background: rgba(17, 25, 40, 0.83);
-  border: 1px solid rgba(133, 76, 230, 0.2);
+  background: rgba(22, 14, 6, 0.85);
+  border: 1px solid rgba(232, 146, 12, 0.2);
   border-radius: 16px;
   padding: 24px 28px;
-  box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
+  box-shadow: rgba(192, 80, 26, 0.1) 0px 4px 24px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease,
     transform 0.25s ease;
 
   &:hover {
-    border-color: rgba(133, 76, 230, 0.5);
-    box-shadow: rgba(133, 76, 230, 0.22) 0px 8px 36px;
+    border-color: rgba(232, 146, 12, 0.5);
+    box-shadow: rgba(232, 146, 12, 0.2) 0px 8px 36px;
     transform: translateY(-3px);
   }
 
@@ -57,14 +57,14 @@ const CompanyLogo = styled.img`
   height: 48px;
   border-radius: 10px;
   object-fit: cover;
-  border: 1px solid rgba(133, 76, 230, 0.25);
+  border: 1px solid rgba(232, 146, 12, 0.25);
   background: rgba(255, 255, 255, 0.06);
   flex-shrink: 0;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    border-color: rgba(133, 76, 230, 0.6);
-    box-shadow: 0 0 10px rgba(133, 76, 230, 0.35);
+    border-color: rgba(232, 146, 12, 0.6);
+    box-shadow: 0 0 10px rgba(232, 146, 12, 0.35);
   }
 
   @media (max-width: 600px) {
@@ -82,7 +82,7 @@ const HeaderInfo = styled.div`
 const Role = styled.div`
   font-size: 20px;
   font-weight: 700;
-  background: linear-gradient(90deg, #854ce6, #a78bfa);
+  background: linear-gradient(90deg, #E8920C, #FBB346);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -103,7 +103,7 @@ const CompanyLink = styled.a`
   transition: color 0.2s ease;
 
   &:hover {
-    color: #a78bfa;
+    color: #FBB346;
   }
 
   &::after {
@@ -130,9 +130,9 @@ const Badge = styled.span`
   font-weight: 500;
   padding: 3px 12px;
   border-radius: 20px;
-  background: rgba(133, 76, 230, 0.12);
-  border: 1px solid rgba(133, 76, 230, 0.35);
-  color: #a78bfa;
+  background: rgba(232, 146, 12, 0.12);
+  border: 1px solid rgba(232, 146, 12, 0.35);
+  color: #FBB346;
 `;
 
 const Divider = styled.div`
@@ -161,7 +161,7 @@ const DescItem = styled.li`
 
   &::before {
     content: "▹";
-    color: #854ce6;
+    color: #E8920C;
     font-size: 14px;
     flex-shrink: 0;
     margin-top: 1px;
@@ -198,9 +198,9 @@ const SkillTag = styled.div`
   transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 
   &:hover {
-    border-color: rgba(133, 76, 230, 0.55);
-    background: rgba(133, 76, 230, 0.1);
-    color: #a78bfa;
+    border-color: rgba(232, 146, 12, 0.55);
+    background: rgba(232, 146, 12, 0.1);
+    color: #FBB346;
   }
 `;
 

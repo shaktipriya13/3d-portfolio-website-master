@@ -19,7 +19,7 @@ const Nav = styled.div`
     backdrop-filter 0.35s ease;
 
   background: ${({ $scrolled }) =>
-    $scrolled ? "rgba(9, 9, 23, 0.92)" : "rgba(9, 9, 23, 0.55)"};
+    $scrolled ? "rgba(12, 8, 4, 0.94)" : "rgba(12, 8, 4, 0.60)"};
   backdrop-filter: blur(${({ $scrolled }) => ($scrolled ? "24px" : "10px")});
   -webkit-backdrop-filter: blur(
     ${({ $scrolled }) => ($scrolled ? "24px" : "10px")}
@@ -37,8 +37,8 @@ const Nav = styled.div`
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(133, 76, 230, 0.5) 30%,
-      rgba(205, 28, 181, 0.5) 70%,
+      rgba(232, 146, 12, 0.55) 30%,
+      rgba(192, 80, 26, 0.55) 70%,
       transparent 100%
     );
     opacity: ${({ $scrolled }) => ($scrolled ? "1" : "0.5")};
@@ -112,7 +112,7 @@ const NavLink = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.text_primary};
-    background: rgba(133, 76, 230, 0.08);
+    background: rgba(232, 146, 12, 0.08);
 
     &::after {
       transform: scaleX(1);
@@ -145,7 +145,7 @@ const GithubButton = styled.a`
   background: linear-gradient(
     135deg,
     ${({ theme }) => theme.primary},
-    #cd1cb5
+    #C0501A
   );
   color: #fff;
   border: none;
@@ -170,7 +170,7 @@ const MobileIcon = styled.div`
   transition: background 0.2s ease;
 
   &:hover {
-    background: rgba(133, 76, 230, 0.12);
+    background: rgba(232, 146, 12, 0.12);
   }
 
   @media screen and (max-width: 768px) {
@@ -183,10 +183,10 @@ const MobileMenu = styled.div`
   flex-direction: column;
   gap: 4px;
   padding: 16px 20px 24px;
-  background: rgba(17, 17, 28, 0.95);
+  background: rgba(20, 12, 5, 0.96);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(133, 76, 230, 0.2);
+  border-bottom: 1px solid rgba(232, 146, 12, 0.22);
   position: absolute;
   top: 72px;
   left: 0;
@@ -211,7 +211,7 @@ const MobileNavLink = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.text_primary};
-    background: rgba(133, 76, 230, 0.1);
+    background: rgba(232, 146, 12, 0.1);
   }
 `;
 
@@ -226,7 +226,7 @@ const MobileGithubBtn = styled.a`
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #cd1cb5);
+  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #C0501A);
   color: #fff;
   box-shadow: 0 0 18px ${({ theme }) => theme.primary + "40"};
   transition: all 0.25s ease;

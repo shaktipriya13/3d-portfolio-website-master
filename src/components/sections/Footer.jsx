@@ -20,8 +20,8 @@ const FooterContainer = styled.footer`
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(133, 76, 230, 0.6) 30%,
-      rgba(205, 28, 181, 0.6) 70%,
+      rgba(232, 146, 12, 0.6) 30%,
+      rgba(192, 80, 26, 0.6) 70%,
       transparent 100%
     );
   }
@@ -101,17 +101,17 @@ const SocialIcon = styled.a`
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(133, 76, 230, 0.08);
-  border: 1px solid rgba(133, 76, 230, 0.22);
+  background: rgba(232, 146, 12, 0.08);
+  border: 1px solid rgba(232, 146, 12, 0.22);
   color: ${({ theme }) => theme.text_secondary};
   transition: all 0.25s ease;
   text-decoration: none;
 
   &:hover {
-    background: rgba(133, 76, 230, 0.18);
-    border-color: rgba(133, 76, 230, 0.55);
+    background: rgba(232, 146, 12, 0.18);
+    border-color: rgba(232, 146, 12, 0.55);
     color: ${({ theme }) => theme.primary};
-    box-shadow: 0 0 18px rgba(133, 76, 230, 0.28);
+    box-shadow: 0 0 18px rgba(232, 146, 12, 0.28);
     transform: translateY(-2px);
   }
 `;
@@ -127,7 +127,7 @@ const ResumeButton = styled.a`
   text-decoration: none;
   cursor: pointer;
   transition: all 0.25s ease;
-  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #cd1cb5);
+  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #C0501A);
   color: #fff;
   border: none;
   box-shadow: 0 0 16px ${({ theme }) => theme.primary + "40"};
@@ -155,7 +155,7 @@ const NavDot = styled.span`
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: rgba(133, 76, 230, 0.4);
+  background: rgba(232, 146, 12, 0.4);
   flex-shrink: 0;
 
   @media (max-width: 480px) {
@@ -192,7 +192,7 @@ const NavLink = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.text_primary};
-    background: rgba(133, 76, 230, 0.08);
+    background: rgba(232, 146, 12, 0.08);
 
     &::after {
       transform: scaleX(1);
@@ -207,8 +207,8 @@ const Divider = styled.div`
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(133, 76, 230, 0.3) 30%,
-    rgba(205, 28, 181, 0.3) 70%,
+    rgba(232, 146, 12, 0.32) 30%,
+    rgba(192, 80, 26, 0.32) 70%,
     transparent 100%
   );
 `;
@@ -243,15 +243,15 @@ const BackToTop = styled.button`
   transition: all 0.25s ease;
   background: transparent;
   color: ${({ theme }) => theme.text_secondary};
-  border: 1px solid rgba(133, 76, 230, 0.3);
+  border: 1px solid rgba(232, 146, 12, 0.3);
   letter-spacing: 0.3px;
   font-family: inherit;
 
   &:hover {
-    background: rgba(133, 76, 230, 0.1);
-    border-color: rgba(133, 76, 230, 0.6);
+    background: rgba(232, 146, 12, 0.1);
+    border-color: rgba(232, 146, 12, 0.6);
     color: ${({ theme }) => theme.primary};
-    box-shadow: 0 0 16px rgba(133, 76, 230, 0.2);
+    box-shadow: 0 0 16px rgba(232, 146, 12, 0.22);
     transform: translateY(-1px);
   }
 `;

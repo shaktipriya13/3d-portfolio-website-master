@@ -42,7 +42,7 @@ const Title = styled.div`
     135deg,
     ${({ theme }) => theme.text_primary} 0%,
     ${({ theme }) => theme.primary} 55%,
-    #cd1cb5 100%
+    #C0501A 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -55,7 +55,7 @@ const Title = styled.div`
 const TitleUnderline = styled.div`
   width: 56px;
   height: 4px;
-  background: linear-gradient(90deg, ${({ theme }) => theme.primary}, #cd1cb5);
+  background: linear-gradient(90deg, ${({ theme }) => theme.primary}, #C0501A);
   border-radius: 2px;
   margin: 10px auto 0;
 `;
@@ -86,10 +86,10 @@ const SkillsContainer = styled.div`
 const SkillCard = styled.div`
   width: 100%;
   max-width: 500px;
-  background: rgba(23, 23, 33, 0.82);
+  background: rgba(28, 17, 7, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(133, 76, 230, 0.15);
+  border: 1px solid rgba(232, 146, 12, 0.16);
   border-radius: 20px;
   padding: 28px 30px 24px;
   position: relative;
@@ -106,14 +106,14 @@ const SkillCard = styled.div`
     background: linear-gradient(
       90deg,
       ${({ theme }) => theme.primary},
-      #cd1cb5,
+      #C0501A,
       transparent
     );
   }
 
   &:hover {
-    border-color: rgba(133, 76, 230, 0.38);
-    box-shadow: 0 8px 40px rgba(133, 76, 230, 0.14),
+    border-color: rgba(232, 146, 12, 0.40);
+    box-shadow: 0 8px 40px rgba(232, 146, 12, 0.14),
       0 2px 12px rgba(0, 0, 0, 0.4);
   }
 
@@ -145,7 +145,7 @@ const SkillDot = styled.div`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #cd1cb5);
+  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #C0501A);
   flex-shrink: 0;
 `;
 
@@ -162,8 +162,8 @@ const SkillItem = styled.div`
   gap: 8px;
   padding: 8px 14px;
   border-radius: 100px;
-  background: rgba(133, 76, 230, 0.08);
-  border: 1px solid rgba(133, 76, 230, 0.2);
+  background: rgba(232, 146, 12, 0.08);
+  border: 1px solid rgba(232, 146, 12, 0.22);
   color: ${({ theme }) => theme.text_secondary};
   font-size: 13.5px;
   font-weight: 500;
@@ -171,11 +171,11 @@ const SkillItem = styled.div`
   cursor: default;
 
   &:hover {
-    background: rgba(133, 76, 230, 0.18);
+    background: rgba(232, 146, 12, 0.18);
     border-color: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.text_primary};
     transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(133, 76, 230, 0.2);
+    box-shadow: 0 4px 14px rgba(232, 146, 12, 0.22);
   }
 
   @media (max-width: 768px) {

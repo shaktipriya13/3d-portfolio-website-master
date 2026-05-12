@@ -65,8 +65,8 @@ const TimelineWrapper = styled.div`
     width: 2px;
     background: linear-gradient(
       to bottom,
-      #854ce6,
-      rgba(133, 76, 230, 0.4),
+      #E8920C,
+      rgba(232, 146, 12, 0.4),
       transparent
     );
   }

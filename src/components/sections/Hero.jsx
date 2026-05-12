@@ -114,8 +114,8 @@ const StatusBadge = styled.div`
   gap: 8px;
   padding: 6px 16px 6px 10px;
   border-radius: 100px;
-  background: rgba(133, 76, 230, 0.1);
-  border: 1px solid rgba(133, 76, 230, 0.28);
+  background: rgba(232, 146, 12, 0.1);
+  border: 1px solid rgba(232, 146, 12, 0.28);
   font-size: 13px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
@@ -159,7 +159,7 @@ const TitleName = styled.span`
     135deg,
     ${({ theme }) => theme.text_primary} 0%,
     ${({ theme }) => theme.primary} 55%,
-    #cd1cb5 100%
+    #C0501A 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -224,7 +224,7 @@ const ResumeButton = styled.a`
   text-decoration: none;
   cursor: pointer;
   transition: all 0.28s ease;
-  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #cd1cb5);
+  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #C0501A);
   background-size: 200% 200%;
   animation: ${gradientSpin} 4s ease infinite;
   color: #fff;
@@ -246,8 +246,8 @@ const SocialBtn = styled.a`
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1.5px solid rgba(133, 76, 230, 0.35);
-  background: rgba(133, 76, 230, 0.08);
+  border: 1.5px solid rgba(232, 146, 12, 0.35);
+  background: rgba(232, 146, 12, 0.08);
   color: ${({ theme }) => theme.text_secondary};
   text-decoration: none;
   transition: all 0.22s ease;
@@ -255,7 +255,7 @@ const SocialBtn = styled.a`
 
   &:hover {
     border-color: ${({ theme }) => theme.primary};
-    background: rgba(133, 76, 230, 0.18);
+    background: rgba(232, 146, 12, 0.18);
     color: ${({ theme }) => theme.primary};
     transform: translateY(-2px);
     box-shadow: 0 0 14px ${({ theme }) => theme.primary + "40"};
@@ -292,7 +292,7 @@ const ImgRing = styled.div`
   height: 100%;
   border-radius: 50%;
   padding: 3px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #cd1cb5, ${({ theme }) => theme.primary});
+  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, #C0501A, ${({ theme }) => theme.primary});
   background-size: 200% 200%;
   animation: ${gradientSpin} 3.5s ease infinite;
 `;

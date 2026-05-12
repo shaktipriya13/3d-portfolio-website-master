@@ -15,11 +15,11 @@ const cardVariants = {
 
 const Card = styled(motion.div)`
   width: 330px;
-  background: rgba(23, 23, 33, 0.82);
+  background: rgba(28, 17, 7, 0.84);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 18px;
-  border: 1px solid rgba(133, 76, 230, 0.14);
+  border: 1px solid rgba(232, 146, 12, 0.15);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -28,8 +28,8 @@ const Card = styled(motion.div)`
   cursor: pointer;
 
   &:hover {
-    border-color: rgba(133, 76, 230, 0.48);
-    box-shadow: 0 10px 48px rgba(133, 76, 230, 0.18),
+    border-color: rgba(232, 146, 12, 0.50);
+    box-shadow: 0 10px 48px rgba(232, 146, 12, 0.18),
       0 2px 12px rgba(0, 0, 0, 0.5);
     transform: translateY(-7px);
   }
@@ -59,7 +59,7 @@ const ImageOverlay = styled.div`
   background: linear-gradient(
     to bottom,
     transparent 40%,
-    rgba(9, 9, 23, 0.88) 100%
+    rgba(12, 8, 4, 0.90) 100%
   );
 `;
 
@@ -73,7 +73,7 @@ const CategoryBadge = styled.div`
   font-weight: 700;
   letter-spacing: 0.9px;
   text-transform: uppercase;
-  background: rgba(133, 76, 230, 0.82);
+  background: rgba(232, 146, 12, 0.88);
   color: #fff;
   backdrop-filter: blur(6px);
 `;
@@ -179,7 +179,7 @@ const LiveBtn = styled.a`
   background: linear-gradient(
     135deg,
     ${({ theme }) => theme.primary},
-    #cd1cb5
+    #C0501A
   );
   border: 1px solid transparent;
   color: #fff;
