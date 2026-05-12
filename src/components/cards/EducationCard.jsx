@@ -1,120 +1,190 @@
-import React from "react";
-import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const Top = styled.div`
-  width: 100%;
-  display: flex;
-  max-width: 100%;
-  gap: 12px;
-`;
-const Image = styled.img`
-  height: 50px;
-  border-radius: 10px;
-  margin-top: 4px;
-  @media only screen and (max-width: 768px) {
-    height: 40px;
-  }
-`;
-const Body = styled.div`
-  width: 100%;
+const Card = styled.div`
+  background: rgba(17, 25, 40, 0.83);
+  border: 1px solid rgba(133, 76, 230, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-`;
-const School = styled.div`
-  font-size: 18px;
-  font-weight: 600px;
-  color: ${({ theme }) => theme.text_primary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 14px;
-  }
-`;
-const Degree = styled.div`
-  font-size: 14px;
-  font-weight: 500px;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-const Date = styled.div`
-  font-size: 12px;
-  font-weight: 400px;
-  color: ${({ theme }) => theme.text_secondary + 80};
+  box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.25s ease;
 
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
+  &:hover {
+    border-color: rgba(133, 76, 230, 0.5);
+    box-shadow: rgba(133, 76, 230, 0.22) 0px 8px 36px;
+    transform: translateY(-4px);
   }
 `;
 
-const Description = styled.div`
+const AccentBar = styled.div`
   width: 100%;
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
-  margin-bottom: 10px;
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
+  height: 4px;
+  background: linear-gradient(90deg, #854ce6, #a78bfa, #6d28d9);
+  flex-shrink: 0;
 `;
 
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
+const Body = styled.div`
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 `;
-const Span = styled.div`
+
+const SchoolRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+`;
+
+const SchoolLogo = styled.img`
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(133, 76, 230, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+`;
+
+const SchoolInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+`;
+
+const SchoolName = styled.div`
+  font-size: 14px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text_primary};
+  line-height: 1.3;
+  overflow: hidden;
   display: -webkit-box;
-  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+`;
+
+const DateText = styled.div`
+  font-size: 11px;
+  font-weight: 500;
+  color: #a78bfa;
+`;
+
+const Degree = styled.div`
+  font-size: 12px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+  line-height: 1.45;
+  margin-bottom: 12px;
+`;
+
+const GradeRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+`;
+
+const GradeLabel = styled.span`
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: ${({ theme }) => theme.text_secondary};
+`;
+
+const GradeBadge = styled.span`
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: rgba(133, 76, 230, 0.12);
+  border: 1px solid rgba(133, 76, 230, 0.35);
+  color: #a78bfa;
+`;
+
+const Divider = styled.div`
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin-bottom: 14px;
+`;
+
+const DescWrapper = styled.div`
+  position: relative;
+  flex: 1;
+`;
+
+const DescText = styled.div`
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: ${({ theme }) => theme.text_secondary};
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: ${({ expanded }) => (expanded ? "unset" : "4")};
+  -webkit-box-orient: vertical;
+`;
+
+const ToggleBtn = styled.button`
+  background: none;
+  border: none;
+  padding: 6px 0 0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: #854ce6;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #a78bfa;
+  }
 `;
 
 const EducationCard = ({ education }) => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <VerticalTimelineElement
-      icon={
-        <img
-          width="100%"
-          height="100%"
-          alt={education?.school}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={education?.img}
-        />
-      }
-      contentStyle={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "12px",
-        background: "#1d1836",
-        color: "#fff",
-        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        backgroundColor: "rgba(17, 25, 40, 0.83)",
-        border: "1px solid rgba(255, 255, 255, 0.125)",
-        borderRadius: "6px",
-      }}
-      contentArrowStyle={{
-        borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
-      }}
-      date={education?.date}
-    >
-      <Top>
-        <Image src={education?.img} />
-        <Body>
-          <School>{education?.school}</School>
-          <Degree>{education?.degree}</Degree>
-          <Date>{education?.date}</Date>
-        </Body>
-      </Top>
-      <Grade>
-        <b>Grade : </b>
-        {education?.grade}
-      </Grade>
-      <Description>
-        {education?.desc && <Span>{education.desc}</Span>}
-      </Description>
-    </VerticalTimelineElement>
+    <Card>
+      <AccentBar />
+      <Body>
+        <SchoolRow>
+          {education?.img && (
+            <SchoolLogo src={education.img} alt={education.school} />
+          )}
+          <SchoolInfo>
+            <SchoolName>{education?.school}</SchoolName>
+            <DateText>{education?.date}</DateText>
+          </SchoolInfo>
+        </SchoolRow>
+
+        <Degree>{education?.degree}</Degree>
+
+        <GradeRow>
+          <GradeLabel>Grade</GradeLabel>
+          <GradeBadge>{education?.grade}</GradeBadge>
+        </GradeRow>
+
+        {education?.desc && (
+          <>
+            <Divider />
+            <DescWrapper>
+              <DescText expanded={expanded}>{education.desc}</DescText>
+              <ToggleBtn onClick={() => setExpanded((p) => !p)}>
+                {expanded ? "▲ Show less" : "▼ Read more"}
+              </ToggleBtn>
+            </DescWrapper>
+          </>
+        )}
+      </Body>
+    </Card>
   );
 };
 

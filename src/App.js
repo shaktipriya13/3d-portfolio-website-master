@@ -1,15 +1,18 @@
+import React, { Suspense, lazy } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
-// import Experience from "./components/sections/Experience";
-import Education from "./components/sections/Education";
 import StartCanvas from "./components/canvas/Stars";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/sections/Footer";
+
+// Lazy-load below-fold sections to reduce initial JS parse/exec time
+const Experience = lazy(() => import("./components/sections/Experience"));
+const Projects = lazy(() => import("./components/sections/Projects"));
+const Education = lazy(() => import("./components/sections/Education"));
+const Contact = lazy(() => import("./components/sections/Contact"));
+const Footer = lazy(() => import("./components/sections/Footer"));
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -45,14 +48,16 @@ function App() {
             <Hero />
             <Wrapper>
               <Skills />
-              {/* <Experience /> */}
             </Wrapper>
-            <Projects />
-            <Wrapper>
-              <Education />
-              <Contact />
-            </Wrapper>
-            <Footer />
+            <Suspense fallback={null}>
+              <Experience />
+              <Projects />
+              <Wrapper>
+                <Education />
+                <Contact />
+              </Wrapper>
+              <Footer />
+            </Suspense>
           </div>
         </Body>
       </BrowserRouter>

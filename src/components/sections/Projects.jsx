@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { projects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
+  align-items: center;
   margin-top: 50px;
   padding: 0px 16px;
-  position: rlative;
+  position: relative;
   z-index: 1;
-  align-items: center;
 `;
 
 const Wrapper = styled.div`
@@ -23,126 +23,160 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1100px;
   gap: 12px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
 `;
+
+const SectionLabel = styled.div`
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.primary};
+  opacity: 0.9;
+`;
+
 const Title = styled.div`
   font-size: 52px;
   text-align: center;
-  font-weight: 600;
-  margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
+  font-weight: 700;
+  margin-top: 6px;
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.text_primary} 0%,
+    ${({ theme }) => theme.primary} 55%,
+    #cd1cb5 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   @media (max-width: 768px) {
-    margin-top: 12px;
     font-size: 32px;
   }
 `;
+
+const TitleUnderline = styled.div`
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, ${({ theme }) => theme.primary}, #cd1cb5);
+  border-radius: 2px;
+  margin: 10px auto 0;
+`;
+
 const Desc = styled.div`
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
   color: ${({ theme }) => theme.text_secondary};
+  max-width: 580px;
+  line-height: 1.75;
+  margin: 20px 0 4px;
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 15px;
   }
 `;
 
-const ToggleButtonGroup = styled.div`
+const FilterRow = styled.div`
   display: flex;
-  border: 1.5px solid ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.primary};
-  font-size: 16px;
-  border-radius: 12px;
-font-weight 500;
-margin: 22px 0;
-@media (max-width: 768px){
-    font-size: 12px;
-}
-`;
-const ToggleButton = styled.div`
-  padding: 8px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  &:hover {
-    background: ${({ theme }) => theme.primary + 20};
-  }
-  @media (max-width: 768px) {
-    padding: 6px 8px;
-    border-radius: 4px;
-  }
-  ${({ active, theme }) =>
-    active &&
-    `
-  background:  ${theme.primary + 20};
-  `}
-`;
-const Divider = styled.div`
-  width: 1.5px;
-  background: ${({ theme }) => theme.primary};
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 28px 0 16px;
 `;
 
-const CardContainer = styled.div`
+const FilterPill = styled.button`
+  padding: 9px 22px;
+  border-radius: 100px;
+  border: 1.5px solid
+    ${({ active, theme }) => (active ? theme.primary : theme.primary + "40")};
+  background: ${({ active, theme }) =>
+    active
+      ? `linear-gradient(135deg, ${theme.primary}28, #cd1cb518)`
+      : "transparent"};
+  color: ${({ active, theme }) =>
+    active ? theme.primary : theme.text_secondary};
+  font-size: 13.5px;
+  font-weight: ${({ active }) => (active ? "600" : "500")};
+  cursor: pointer;
+  transition: all 0.22s ease;
+  letter-spacing: 0.4px;
+  box-shadow: ${({ active, theme }) =>
+    active ? `0 0 18px ${theme.primary}28` : "none"};
+
+  &:hover {
+    border-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.primary + "18"};
+  }
+
+  @media (max-width: 768px) {
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+`;
+
+const CardContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 28px;
+  align-items: stretch;
+  gap: 26px;
   flex-wrap: wrap;
+  padding: 8px 0 32px;
 `;
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const CATEGORIES = [
+  { key: "all", label: "All" },
+  { key: "fullstack", label: "Full Stack" },
+  { key: "backend", label: "Backend" },
+  { key: "frontend", label: "Frontend" },
+];
 
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
+
+  const filtered =
+    toggle === "all"
+      ? projects
+      : projects.filter((p) => p.category === toggle);
+
   return (
     <Container id="Projects">
       <Wrapper>
-        <Title>Projects</Title>
-        <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
-          I have worked on a wide range of projects. From fullstacks to android
-          apps. Here are some of my projects.
+        <SectionLabel>Portfolio</SectionLabel>
+        <Title>My Projects</Title>
+        <TitleUnderline />
+        <Desc>
+          A showcase of full-stack, backend, and frontend work — from
+          AI-powered platforms to real-time applications.
         </Desc>
 
-        <ToggleButtonGroup>
-          <ToggleButton
-            active={toggle === "all"}
-            onClick={() => setToggle("all")}
-          >
-            ALL
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            active={toggle === "fullstack"}
-            onClick={() => setToggle("fullstack")}
-          >
-            FULLSTACK
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            active={toggle === "backend"}
-            onClick={() => setToggle("backend")}
-          >
-            BACKEND
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            active={toggle === "frontend"}
-            onClick={() => setToggle("frontend")}
-          >
-            FRONTEND
-          </ToggleButton>
-        </ToggleButtonGroup>
+        <FilterRow>
+          {CATEGORIES.map(({ key, label }) => (
+            <FilterPill
+              key={key}
+              active={toggle === key}
+              onClick={() => setToggle(key)}
+            >
+              {label}
+            </FilterPill>
+          ))}
+        </FilterRow>
 
-        <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => <ProjectCard project={project} />)}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard project={project} />
-            ))}
+        <CardContainer
+          key={toggle}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {filtered.map((project, i) => (
+            <ProjectCard key={`${project.id}-${i}`} project={project} />
+          ))}
         </CardContainer>
       </Wrapper>
     </Container>

@@ -1,182 +1,249 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
-const Card = styled.div`
+const cardVariants = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.42, ease: "easeOut" },
+  },
+};
+
+const Card = styled(motion.div)`
   width: 330px;
-  height: 490px;
-  background-color: ${({ theme }) => theme.card};
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+  background: rgba(23, 23, 33, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(133, 76, 230, 0.14);
   overflow: hidden;
-  padding: 26px 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  transition: all 0.5s ease-in-out;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
-    filter: brightness(1.1);
+    border-color: rgba(133, 76, 230, 0.48);
+    box-shadow: 0 10px 48px rgba(133, 76, 230, 0.18),
+      0 2px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-7px);
   }
 `;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 188px;
+  overflow: hidden;
+`;
+
 const Image = styled.img`
   width: 100%;
-  height: 180px;
-  background-color: ${({ theme }) => theme.white};
-  border-radius: 10px;
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+  ${Card}:hover & {
+    transform: scale(1.06);
+  }
 `;
-const Tags = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 4px;
+
+const ImageOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(9, 9, 23, 0.88) 100%
+  );
 `;
-const Details = styled.div`
-  width: 100%;
+
+const CategoryBadge = styled.div`
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 11px;
+  border-radius: 100px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  background: rgba(133, 76, 230, 0.82);
+  color: #fff;
+  backdrop-filter: blur(6px);
+`;
+
+const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0px;
-  padding: 0px 2px;
+  flex: 1;
+  padding: 18px 20px 20px;
+  gap: 8px;
 `;
+
 const Title = styled.div`
-  font-size: 20px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  overflow: hidden;
+  font-size: 17.5px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text_primary};
+  line-height: 1.35;
   display: -webkit-box;
-  max-width: 100%;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
-`;
-const Date = styled.div`
-  font-size: 12px;
-  margin-left: 2px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
-`;
-const Description = styled.div`
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  overflow: hidden;
-  margin-top: 8px;
-  display: -webkit-box;
-  max-width: 100%;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-`;
-const Members = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-`;
-const Avatar = styled.img`
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: -10px;
-  background-color: ${({ theme }) => theme.white};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 3px solid ${({ theme }) => theme.card};
-`;
-const Button = styled.a`
-  color: ${({ theme }) => theme.primary};
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
 `;
 
-const StyledButton = styled.a`
-  text-decoration: none;
-  text-align: center;
-  padding: 12px 24px;
-  font-weight: 600;
-  font-size: 16px;
-  border-radius: 30px;
-  color: white;
+const DateText = styled.div`
+  font-size: 11.5px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary + "90"};
+`;
+
+const Description = styled.div`
+  font-size: 13.5px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary};
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+`;
+
+const Tags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+`;
+
+const Tag = styled.span`
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.primary + "18"};
+  border: 1px solid ${({ theme }) => theme.primary + "2e"};
+  white-space: nowrap;
+`;
+
+const Actions = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+`;
+
+const GhBtn = styled.a`
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-
-  box-shadow: 0 0 12px ${({ theme }) => theme.primary};
-  transition: all 0.3s ease-in-out;
-
-  span {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-  }
+  gap: 7px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: ${({ theme }) => theme.text_secondary};
+  transition: all 0.22s ease;
 
   &:hover {
-    transform: scale(1.05);
-
-    span {
-      transform: rotate(360deg);
-      color: black;
-    }
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.28);
+    color: ${({ theme }) => theme.text_primary};
   }
 `;
-const ButtonsContainer = styled.div`
+
+const LiveBtn = styled.a`
+  flex: 1;
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.primary},
+    #cd1cb5
+  );
+  border: 1px solid transparent;
+  color: #fff;
+  box-shadow: 0 0 18px ${({ theme }) => theme.primary + "44"};
+  transition: all 0.22s ease;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    align-items: center;
+  &:hover {
+    box-shadow: 0 0 28px ${({ theme }) => theme.primary + "70"};
+    filter: brightness(1.12);
   }
 `;
+
 const ProjectCard = ({ project }) => {
+  const description = project.description || project.desc || "";
+  const displayTags = (project.tags || []).filter((t) => t.trim()).slice(0, 6);
+
   return (
-    <Card>
-      <Image src={project.image} />
-      <Tags></Tags>
-      <Details>
+    <Card variants={cardVariants}>
+      <ImageWrapper>
+        <Image src={project.image} alt={project.title} />
+        <ImageOverlay />
+        {project.category && (
+          <CategoryBadge>{project.category}</CategoryBadge>
+        )}
+      </ImageWrapper>
+
+      <Content>
         <Title>{project.title}</Title>
-        <Date>{project.date}</Date>
-        <Description>{project.description}</Description>
-      </Details>
-      <Members>
-        {project.member?.map((member) => (
-          <Avatar src={member.img} />
-        ))}
-      </Members>
-      
-      <ButtonsContainer>
-        
-        <StyledButton href={project.github} target="_blank" aria-label="GitHub Repo">
-            <span>
-              <FaGithub size={20} />
-            </span>
-        </StyledButton>
+        <DateText>{project.date}</DateText>
+        <Description>{description}</Description>
 
-        <StyledButton href={project.webapp} target="_blank" aria-label="Live Site">
-          <span>
-            <FiExternalLink size={20} />
-          </span>
-        </StyledButton>
+        {displayTags.length > 0 && (
+          <Tags>
+            {displayTags.map((tag, i) => (
+              <Tag key={i}>{tag}</Tag>
+            ))}
+          </Tags>
+        )}
 
-      </ButtonsContainer>
-
+        <Actions>
+          {project.github && (
+            <GhBtn
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Repository"
+            >
+              <FaGithub size={15} />
+              Code
+            </GhBtn>
+          )}
+          {project.webapp && (
+            <LiveBtn
+              href={project.webapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Live Demo"
+            >
+              <FiExternalLink size={15} />
+              Live Demo
+            </LiveBtn>
+          )}
+        </Actions>
+      </Content>
     </Card>
   );
 };
