@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const CardWrapper = styled.div`
@@ -169,6 +169,33 @@ const DescItem = styled.li`
 
   @media (max-width: 768px) {
     font-size: 13px;
+
+    &.mobile-collapsed {
+      display: none;
+    }
+  }
+`;
+
+const ReadMoreBtn = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  color: #E8920C;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+
+  &:hover {
+    color: #FBB346;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    display: inline-block;
   }
 `;
 
@@ -205,6 +232,10 @@ const SkillTag = styled.div`
 `;
 
 const ExperienceCard = ({ experience }) => {
+  const [expanded, setExpanded] = useState(false);
+  const desc = experience?.desc ?? [];
+  const hasMore = desc.length > 1;
+
   return (
     <CardWrapper>
       <Card>
@@ -235,14 +266,24 @@ const ExperienceCard = ({ experience }) => {
           {experience?.location && <Badge>📍 {experience.location}</Badge>}
         </MetaRow>
 
-        {experience?.desc?.length > 0 && (
+        {desc.length > 0 && (
           <>
             <Divider />
             <DescList>
-              {experience.desc.map((point, i) => (
-                <DescItem key={i}>{point}</DescItem>
+              {desc.map((point, i) => (
+                <DescItem
+                  key={i}
+                  className={i > 0 && !expanded ? "mobile-collapsed" : undefined}
+                >
+                  {point}
+                </DescItem>
               ))}
             </DescList>
+            {hasMore && (
+              <ReadMoreBtn onClick={() => setExpanded((v) => !v)}>
+                {expanded ? "Show less ▲" : `Read more ▼`}
+              </ReadMoreBtn>
+            )}
           </>
         )}
 

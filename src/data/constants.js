@@ -7,7 +7,7 @@ export const Bio = {
 
   ],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "From responsive frontends to scalable backend systems, I build seamless digital experiences using React, Next.js, Node.js, and modern web technologies.",
   github: "https://github.com/shaktipriya13",
   resume:
     "https://drive.google.com/file/d/1K8rlii591a6H6JJ5D8-o29U9cGQiozxS/view",
@@ -52,6 +52,10 @@ export const skills = [
           "https://static.vecteezy.com/system/resources/previews/066/386/006/non_2x/the-css-logo-icon-free-png.png",
       },
       {
+        name: "TypeScript",
+        image:"https://images.seeklogo.com/logo-png/29/2/typescript-logo-png_seeklogo-298572.png",
+      },
+      {
         name: "JavaScript",
         image:
           "https://tse1.mm.bing.net/th/id/OIP.1fuHy5m0ivTEfkM8hYERVgHaHa?pid=Api&P=0&h=180",
@@ -66,6 +70,10 @@ export const skills = [
         image:
         "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
       },
+      {
+        name: "Animate UI",
+        image: "https://tse1.mm.bing.net/th/id/OIP.2LLKWoGByr5u4LvxVn6G9wHaHa?pid=Api&P=0&h=180",
+      }
       // {
       //   name: "Flutter",
       //   image:
@@ -121,7 +129,7 @@ export const skills = [
       {
          name: "Redis",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+          "https://robert.hawdon.net/blog/wp-content/uploads/2014/02/redis-logo.png",
       }
       // {
       //   name: "Firebase",
@@ -242,6 +250,11 @@ export const skills = [
     title: "Others",
     skills: [
       {
+        name: "C++",
+        image:
+          "https://isocpp.org/assets/images/cpp_logo.png"
+      },
+      {
         name: "Git",
         image:
           "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
@@ -249,7 +262,7 @@ export const skills = [
       {
         name: "GitHub",
         image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          "https://pngimg.com/uploads/github/github_PNG80.png",
       },
       {
         name: "Netlify",
@@ -262,6 +275,11 @@ export const skills = [
           "https://render.com/brand/render_1105076560.svg",
         },
       {
+        name: "Vercel",
+        image:
+          "https://www.jegkomforsent.no/assets/vercel-logo.959b290d.png",
+        },
+      {
         name: "VS Code",
         image:
           "https://quarto.org/docs/get-started/images/vscode-logo.png",
@@ -271,17 +289,27 @@ export const skills = [
         image:
           "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
       },
+      {
+        name: "Puppeteer",
+        image:
+          "https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png"
+      },
+            {
+        name: "Docker",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
+      },
       
       // {
       //   name: "Adobe XD",
       //   image:
       //     "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
       // },
-      // {
-      //   name: "Figma",
-      //   image:
-      //     "https://s3-alpha.figma.com/hub/file/1481185752/fa4cd070-6a79-4e1b-b079-8b9b76408595-cover.png",
-      // },
+      {
+        name: "Figma",
+        image:
+          "https://s3-alpha.figma.com/hub/file/1481185752/fa4cd070-6a79-4e1b-b079-8b9b76408595-cover.png",
+      },
     ],
   },
 ];
