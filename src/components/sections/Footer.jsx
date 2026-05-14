@@ -4,6 +4,14 @@ import { Bio } from "../../data/constants";
 import { LinkedIn } from "@mui/icons-material";
 import { FaGithub } from "react-icons/fa";
 
+const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
+const videoPublicId = process.env.REACT_APP_CLOUDINARY_VIDEO_PUBLIC_ID;
+// q_auto: adaptive quality, f_auto: serves WebM/MP4 based on browser support
+const VIDEO_URL =
+  cloudName && videoPublicId
+    ? `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto/${videoPublicId}`
+    : "/videos/Video Project.mp4";
+
 const FooterContainer = styled.footer`
   width: 100%;
   position: relative;
@@ -31,35 +39,49 @@ const FooterInner = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 28px 28px;
+  padding: 32px 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 `;
 
-/* ── Row 1: Brand left | Social + Resume right ── */
-const TopRow = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
+/* ── Two-column grid (desktop only) ── */
+const MainGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
 
-  @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 `;
 
-const Brand = styled.div`
+/* ── Left column: video + brand text ── */
+const LeftCol = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
+`;
+
+const FooterVideo = styled.video`
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(232, 146, 12, 0.35);
+`;
+
+const BrandText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `;
 
 const Logo = styled.div`
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 0.3px;
   background: linear-gradient(
     135deg,
@@ -72,34 +94,41 @@ const Logo = styled.div`
 `;
 
 const Tagline = styled.p`
-  font-size: 13px;
+  font-size: 12px;
   color: ${({ theme }) => theme.text_secondary};
-  line-height: 1.6;
+  line-height: 1.5;
 `;
 
-const RightGroup = styled.div`
+/* ── Right column: social row + nav rows ── */
+const RightCol = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 14px;
+  gap: 22px;
+  justify-content: center;
+  height: 100%;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     align-items: center;
+    text-align: center;
   }
 `;
 
-const SocialRow = styled.div`
+const RightActions = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const SocialIcon = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 10px;
   background: rgba(232, 146, 12, 0.08);
   border: 1px solid rgba(232, 146, 12, 0.22);
@@ -120,7 +149,7 @@ const ResumeButton = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 20px;
+  padding: 8px 18px;
   border-radius: 100px;
   font-size: 13px;
   font-weight: 600;
@@ -133,6 +162,7 @@ const ResumeButton = styled.a`
   box-shadow: 0 0 16px ${({ theme }) => theme.primary + "40"};
   letter-spacing: 0.3px;
   font-family: inherit;
+  white-space: nowrap;
 
   &:hover {
     box-shadow: 0 0 28px ${({ theme }) => theme.primary + "65"};
@@ -141,14 +171,20 @@ const ResumeButton = styled.a`
   }
 `;
 
-/* ── Row 2: Horizontal nav strip ── */
-const NavStrip = styled.nav`
+const RightNavGrid = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 6px;
+`;
+
+const NavRow = styled.div`
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
-  padding: 6px 0;
+  gap: 2px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const NavDot = styled.span`
@@ -157,19 +193,15 @@ const NavDot = styled.span`
   border-radius: 50%;
   background: rgba(232, 146, 12, 0.4);
   flex-shrink: 0;
-
-  @media (max-width: 480px) {
-    display: none;
-  }
 `;
 
 const NavLink = styled.a`
   position: relative;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 8px;
   color: ${({ theme }) => theme.text_secondary};
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13.5px;
   cursor: pointer;
   transition: color 0.22s ease, background 0.22s ease;
   text-decoration: none;
@@ -180,8 +212,8 @@ const NavLink = styled.a`
     content: "";
     position: absolute;
     bottom: 3px;
-    left: 14px;
-    right: 14px;
+    left: 12px;
+    right: 12px;
     height: 1.5px;
     border-radius: 2px;
     background: ${({ theme }) => theme.primary};
@@ -213,7 +245,7 @@ const Divider = styled.div`
   );
 `;
 
-/* ── Row 3: Copyright + Back to top ── */
+/* ── Bottom row: Copyright + Back to top ── */
 const BottomRow = styled.div`
   display: flex;
   align-items: center;
@@ -221,13 +253,13 @@ const BottomRow = styled.div`
 
   @media (max-width: 600px) {
     flex-direction: column-reverse;
-    gap: 14px;
+    gap: 12px;
     text-align: center;
   }
 `;
 
 const Copyright = styled.p`
-  font-size: 13px;
+  font-size: 12.5px;
   color: ${({ theme }) => theme.text_secondary};
 `;
 
@@ -235,9 +267,9 @@ const BackToTop = styled.button`
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 18px;
+  padding: 6px 16px;
   border-radius: 100px;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -256,36 +288,40 @@ const BackToTop = styled.button`
   }
 `;
 
-const NAV_LINKS = [
-  { label: "About", href: "#About" },
-  { label: "Skills", href: "#Skills" },
-  { label: "Experience", href: "#Experience" },
-  { label: "Projects", href: "#Projects" },
-  { label: "Education", href: "#Education" },
-];
-
 const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <FooterContainer>
       <FooterInner>
-        {/* Brand + Social */}
-        <TopRow>
-          <Brand>
-            <Logo>Shakti Priya</Logo>
-            <Tagline>Full Stack Developer · IIIT Ranchi '26</Tagline>
-          </Brand>
+        <MainGrid>
+          {/* ── Left half ── */}
+          <LeftCol>
+            <FooterVideo
+              src={VIDEO_URL}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+            />
+            <BrandText>
+              <Logo>Shakti Priya</Logo>
+              <Tagline>Full Stack Developer · IIIT Ranchi '26</Tagline>
+            </BrandText>
+          </LeftCol>
 
-          <RightGroup>
-            <SocialRow>
+          {/* ── Right half ── */}
+          <RightCol>
+            {/* Row 1: GitHub · LinkedIn · View Resume */}
+            <RightActions>
               <SocialIcon
                 href={Bio.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 title="GitHub"
               >
-                <FaGithub size={18} />
+                <FaGithub size={17} />
               </SocialIcon>
               <SocialIcon
                 href={Bio.linkedin}
@@ -295,26 +331,32 @@ const Footer = () => {
               >
                 <LinkedIn fontSize="small" />
               </SocialIcon>
-            </SocialRow>
-            <ResumeButton
-              href={Bio.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Resume ↗
-            </ResumeButton>
-          </RightGroup>
-        </TopRow>
+              <ResumeButton
+                href={Bio.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Resume ↗
+              </ResumeButton>
+            </RightActions>
 
-        {/* Horizontal nav links */}
-        <NavStrip>
-          {NAV_LINKS.map(({ label, href }, i) => (
-            <React.Fragment key={label}>
-              <NavLink href={href}>{label}</NavLink>
-              {i < NAV_LINKS.length - 1 && <NavDot />}
-            </React.Fragment>
-          ))}
-        </NavStrip>
+            {/* Rows 2–3: Quick links split into 2 lines */}
+            <RightNavGrid>
+              <NavRow>
+                <NavLink href="#About">About</NavLink>
+                <NavDot />
+                <NavLink href="#Skills">Skills</NavLink>
+                <NavDot />
+                <NavLink href="#Experience">Experience</NavLink>
+              </NavRow>
+              <NavRow>
+                <NavLink href="#Projects">Projects</NavLink>
+                <NavDot />
+                <NavLink href="#Education">Education</NavLink>
+              </NavRow>
+            </RightNavGrid>
+          </RightCol>
+        </MainGrid>
 
         <Divider />
 
